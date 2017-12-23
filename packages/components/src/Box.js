@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import { space, width, responsiveStyle } from 'styled-system'
 import { number, string, array, oneOfType } from 'prop-types'
@@ -19,6 +18,7 @@ const Box = styled(Base)([],
   flex,
   order
 )
+
 Box.displayName = 'Box'
 
 const responsivePropType = oneOfType([

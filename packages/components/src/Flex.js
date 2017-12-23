@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import { responsiveStyle } from 'styled-system'
 import { oneOfType, number, string, array, bool } from 'prop-types'
@@ -17,7 +16,7 @@ const Flex = styled(Box)([],
   column,
   direction,
   align,
-  justify,
+  justify
 )
 Flex.displayName = 'Flex'
 
