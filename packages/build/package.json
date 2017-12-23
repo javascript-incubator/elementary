@@ -1,7 +1,6 @@
 {
   "name": "@elementary/build",
-  "version": "1.0.1",
-  "private": true,
+  "version": "1.0.2",
   "description": "Build Processes For Elementary",
   "main": "index.js",
   "scripts": {

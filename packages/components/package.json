@@ -1,6 +1,6 @@
 {
   "name": "@elementary/components",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Responsive React grid system built with styled-components",
   "main": "dist/main.js",
   "scripts": {
@@ -21,7 +21,7 @@
   "author": "Rajat Sharma",
   "license": "MIT",
   "devDependencies": {
-    "@elementary/build": "^1.0.1",
+    "@elementary/build": "^1.0.2",
     "lerna": "^2.5.1",
     "react": "^16.2.0",
     "rimraf": "^2.6.2",
