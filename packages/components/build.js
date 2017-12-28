@@ -8,7 +8,7 @@ const WebpackPromise = env => new Promise((resolve, reject) => {
     reject(Error('Cannot find ENV'))
     return
   }
-  webpack(buildConfig(env, paths.entry, { path: paths.output, filename: paths.filename }), function (err, stats) {
+  webpack(buildConfig(env, paths.entry, paths.output), function (err, stats) {
     if (err) {
       reject(err)
       return
@@ -28,7 +28,7 @@ const RimrafPromise = dir => new Promise((resolve, reject) => {
   })
 })
 
-RimrafPromise(paths.output)
+RimrafPromise(paths.output.path)
   .then(_ => WebpackPromise({ env: process.env.ENV }))
   .then(stats => {
     console.log('[webpack]', stats.toString({

@@ -1,7 +1,13 @@
 const path = require('path')
 
-module.exports = {
-  output: path.resolve(__dirname, './', 'dist'),
+const output = {
+  library: '@elementary/components',
+  path: path.resolve(__dirname, './', 'dist'),
   filename: 'main.js',
+  libraryTarget: 'commonjs2'
+}
+
+module.exports = {
+  output,
   entry: path.resolve(__dirname, './', 'src', 'index.js')
 }
