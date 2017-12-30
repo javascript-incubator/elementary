@@ -1,19 +1,20 @@
-import { ServerStyleSheet } from 'styled-components';
+import { ServerStyleSheet } from 'styled-components'
 
-function ServerStyles(){
-  let sheet = new ServerStyleSheet();
-  
-  function getStyleTags(){
-    return sheet.getStyleTags();
+function ServerStyles () {
+  let sheet = new ServerStyleSheet()
+
+  function getStyleTags () {
+    return sheet.getStyleTags()
   }
-  
-  function collectStyles(){
-    return sheet.collectStyles();
+
+  function collectStyles () {
+    return sheet.collectStyles()
   }
-  
-  function getStyleElements(){
-    return sheet.getStyleElements();
+
+  function getStyleElements () {
+    return sheet.getStyleElements()
   }
+  return { getStyleTags, collectStyles, getStyleElements }
 }
 
-export default ServerStyles;
+export default ServerStyles

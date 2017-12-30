@@ -2,7 +2,7 @@ import {
   oneOfType,
   number,
   string,
-  array,
+  array
 } from 'prop-types'
 
 const responsivePropType = oneOfType([
@@ -29,7 +29,7 @@ const propTypes = {
   pb: responsivePropType,
   pl: responsivePropType,
   px: responsivePropType,
-  py: responsivePropType,
+  py: responsivePropType
 }
 
 export default propTypes
