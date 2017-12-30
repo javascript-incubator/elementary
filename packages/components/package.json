@@ -4,7 +4,6 @@
   "description": "Components you can use ruthlessly in your everyday React Projects.",
   "main": "dist/main.js",
   "scripts": {
-    "start": "webpack-dev-server",
     "build": "ENV=prod node build.js"
   },
   "files": [
@@ -29,6 +28,8 @@
     "webpack-dev-server": "^2.9.1"
   },
   "dependencies": {
+    "@elementary/core": "^0.1.0",
+    "palx": "^1.0.2",
     "prop-types": "^15.6.0",
     "styled-components": "^2.2.0",
     "styled-system": "^1.0.2",

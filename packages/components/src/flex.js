@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import { responsiveStyle } from 'styled-system'
 import { oneOfType, number, string, array, bool } from 'prop-types'
-import propTypes from './propTypes'
-import Box from './Box'
+import propTypes from './proptypes'
+import Box from './box'
 
 const wrap = responsiveStyle('flex-wrap', 'wrap', 'wrap')
 const direction = responsiveStyle('flex-direction', 'direction')

@@ -21,5 +21,5 @@ export default [
   'direction',
   'align',
   'justify',
-  'column',
+  'column'
 ]
