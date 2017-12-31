@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 import { space, width, responsiveStyle } from 'styled-system'
 import { number, string, array, oneOfType } from 'prop-types'
-import tag from 'tag-hoc'
+import { propHunter } from '@elementary/higherorder-components'
 import propTypes from './proptypes'
 import removeProps from './removeprops'
 
 export const flex = responsiveStyle('flex')
 export const order = responsiveStyle('order')
 
-const Tag = tag(removeProps)
+const Tag = propHunter(removeProps)
 const Base = Tag('div')
 
 const Box = styled(Base)([],

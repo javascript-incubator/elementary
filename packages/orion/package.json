@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
+    "play": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "author": "Rajat Sharma",
   "license": "MIT",
   "dependencies": {
+    "@elementary/components": "^0.1.4",
+    "@elementary/higherorder-components": "^0.1.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },

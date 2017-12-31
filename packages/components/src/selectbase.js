@@ -23,7 +23,7 @@ const Select = styled.select([], {
 const Arrow = styled(props => (
   <svg
     {...props}
-    viewBox='0 0 32 32'>
+	viewBox='0 0 32 32'>
     <path
       d='M0 6 L32 6 L16 28 z'
     />

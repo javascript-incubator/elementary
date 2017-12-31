@@ -4,7 +4,12 @@ import {
   space,
   width,
   fontSize,
-  color
+  color,
+  borderRadius,
+  hover,
+  focus,
+  active,
+  disabled
 } from 'styled-system'
 
 import {
@@ -13,7 +18,7 @@ import {
   number,
   string
 } from 'prop-types'
-import tag from 'tag-hoc'
+import { propHunter } from '@elementary/higherorder-components'
 import blacklist from './blacklist'
 
 const prop = oneOfType([
@@ -53,7 +58,12 @@ const withStyle = (style, props) => Component => {
     space,
     width,
     fontSize,
-    color
+    color,
+    borderRadius,
+    hover,
+    focus,
+    active,
+    disabled
   )
 
   Base.propTypes = propTypes
@@ -64,7 +74,7 @@ const withStyle = (style, props) => Component => {
   return Comp
 }
 
-const Tag = tag(blacklist)
+const Tag = propHunter(blacklist)
 
 const hoc = (style, props) => compose(
   withStyle(style, props),

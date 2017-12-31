@@ -5,8 +5,6 @@ import createLibrary from './createlibrary'
 
 const library = createLibrary(components)
 
-// const { length } = Object.keys(library)
-
 const Components = Object.assign({}, library, { Provider, Flex, Box })
 
 export { Flex, Box } from './grid'

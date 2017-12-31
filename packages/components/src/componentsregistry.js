@@ -50,12 +50,10 @@ const components = [
         boxShadow: `inset 0 0 0 999px ${darken(1 / 8)}`
       },
       '&:focus': {
-        outline: 0,
-        boxShadow: `0 0 0 2px ${color(props)(props.bg)}`
+        outline: 0
       },
       '&:active': {
-        backgroundColor: color(props)(props.bg, 6),
-        boxShadow: `inset 0 0 8px ${darken(1 / 4)}`
+        backgroundColor: color(props)(props.bg, 6)
       },
       '&:disabled': {
         opacity: 1 / 4

@@ -17,7 +17,6 @@
     "layout",
     "css"
   ],
-  "author": "Rajat Sharma",
   "license": "MIT",
   "devDependencies": {
     "@elementary/build": "^1.0.3",
@@ -29,6 +28,7 @@
   },
   "dependencies": {
     "@elementary/core": "^0.1.0",
+    "@elementary/higherorder-components": "^0.1.1",
     "palx": "^1.0.2",
     "prop-types": "^15.6.0",
     "styled-components": "^2.2.0",

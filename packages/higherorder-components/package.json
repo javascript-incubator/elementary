@@ -1,0 +1,17 @@
+{
+  "name": "@elementary/higherorder-components",
+  "version": "0.1.1",
+  "description": "Elementary Higher Order Components",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "ENV=prod node build.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@elementary/build": "^1.0.3",
+    "prop-types": "^15.6.0"
+  },
+  "devDependencies": {
+    "react": "^16.2.0"
+  }
+}
