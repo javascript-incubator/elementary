@@ -13,8 +13,6 @@ import {
   caps,
   align
 } from './utils'
-import { Flex, Box } from './grid'
-import DonutBase from './donutbase'
 import SelectBase from './selectbase'
 
 const numberOrString = oneOfType([ number, string ])
@@ -1172,21 +1170,29 @@ const components = [
       }
     })
   },
-
   {
-    name: 'Donut',
-    type: DonutBase,
-    props: {
-      color: 'blue',
-      strokeWidth: 2,
-      value: 1
-    },
-    style: {}
+    name: 'Box',
+    type: 'div',
+    extras: [
+      'flex',
+      'order'
+    ],
+    style: { boxSizing: 'border-box' }
   },
-
+  {
+    name: 'Flex',
+    type: 'div',
+    extras: [
+      'flexWrap',
+      'flexDirection',
+      'alignItems',
+      'justifyContent'
+    ],
+    style: { display: 'flex' }
+  },
   {
     name: 'Row',
-    type: Flex,
+    type: 'Flex',
     props: {
       mx: -3
     },
@@ -1194,7 +1200,7 @@ const components = [
   },
   {
     name: 'Column',
-    type: Box,
+    type: 'Box',
     props: {
       px: 3,
       mb: 4,

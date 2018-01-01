@@ -1,13 +1,10 @@
 import components from './componentsregistry'
-import { Flex, Box } from './grid'
 import Provider from './provider'
 import createLibrary from './createlibrary'
 
 const library = createLibrary(components)
 
-const Components = Object.assign({}, library, { Provider, Flex, Box })
-
-export { Flex, Box } from './grid'
+const Components = Object.assign({}, library, { Provider })
 
 export { default as Provider } from './provider'
 export { default as hoc } from './hoc'
@@ -91,7 +88,8 @@ export const {
   Arrow,
   Star,
   Embed,
-  Donut,
+  Box,
+  Flex,
   Row,
   Column
 } = library

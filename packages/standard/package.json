@@ -1,7 +1,7 @@
 {
-  "name": "@elementary/higherorder-components",
-  "version": "0.1.1",
-  "description": "Elementary Higher Order Components",
+  "name": "@elementary/standard",
+  "version": "0.1.0",
+  "description": "Props Standard for Elementary Components",
   "main": "dist/main.js",
   "files": [
     "dist"

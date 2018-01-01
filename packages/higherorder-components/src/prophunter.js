@@ -1,29 +1,13 @@
 import React from 'react'
-import PT from 'prop-types'
 
-const tag = (blacklist = []) => {
-  const clean = cleanProps(blacklist)
-
-  return type => {
-    const Base = props => {
-      const isEl = typeof type === 'string'
-      const Comp = isEl ? (props.is || type) : type
-      const next = isEl ? clean(props) : props
-
-      if (isEl) next.is = null
-
-      return <Comp {...next} />
-    }
-
-    Base.propTypes = {
-      is: PT.string
-    }
-
-    return Base
-  }
+const propHunter = (blacklist = []) => Com => {
+  const clean = huntProps(blacklist)
+  const PropHunterElement = props => <Com {...clean(props)} />
+  PropHunterElement.displayName = 'PropHunterElement'
+  return PropHunterElement
 }
 
-export const cleanProps = blacklist => props => {
+export const huntProps = blacklist => props => {
   const next = {}
   for (let key in props) {
     if (blacklist.includes(key)) continue
@@ -32,4 +16,4 @@ export const cleanProps = blacklist => props => {
   return next
 }
 
-export default tag
+export default propHunter

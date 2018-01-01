@@ -21,18 +21,14 @@
   "devDependencies": {
     "@elementary/build": "^1.0.3",
     "lerna": "^2.5.1",
-    "react": "^16.2.0",
-    "rimraf": "^2.6.2",
-    "webpack": "3.3.0",
-    "webpack-dev-server": "^2.9.1"
+    "react": "^16.2.0"
   },
   "dependencies": {
     "@elementary/core": "^0.1.0",
     "@elementary/higherorder-components": "^0.1.1",
+    "@elementary/standard": "^0.1.0",
     "palx": "^1.0.2",
     "prop-types": "^15.6.0",
-    "styled-components": "^2.2.0",
-    "styled-system": "^1.0.2",
-    "tag-hoc": "^1.0.0"
+    "styled-components": "^2.2.0"
   }
 }

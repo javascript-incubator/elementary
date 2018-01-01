@@ -1,47 +1,5 @@
+import { propTypes } from '@elementary/standard'
 
-export default [
-  'width',
-  'w',
-  'maxWidth',
-  'fontSize',
-  'f',
-  'color',
-  'bg',
+const blacklist = Object.keys(propTypes).map(x => Object.keys(propTypes[x])).reduce((acc, a) => [...acc, ...a], [])
 
-  'm',
-  'mt',
-  'mr',
-  'mb',
-  'ml',
-  'mx',
-  'my',
-
-  'p',
-  'pt',
-  'pr',
-  'pb',
-  'pl',
-  'px',
-  'py',
-
-  'active',
-  'ratio',
-  'bold',
-  'caps',
-  'size',
-  'left',
-  'center',
-  'right',
-  'justify',
-  'top',
-  'bottom',
-  'z',
-  'backgroundImage',
-
-  'borderWidth',
-  'size',
-  'position',
-  'index',
-  'direction',
-  'text'
-]
+export default blacklist

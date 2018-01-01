@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "description": "Core Functions for Elementary Package",
   "main": "dist/main.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-	"build": "ENV=prod node build.js"
+    "build": "ENV=prod node build.js"
   },
-  "author": "Rajat Sharma",
   "license": "MIT",
   "devDependencies": {
     "@elementary/build": "^1.0.3"

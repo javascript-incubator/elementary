@@ -1,6 +1,6 @@
 import { compose } from '@elementary/core'
 import styled from 'styled-components'
-import {
+import standard, {
   space,
   width,
   fontSize,
@@ -10,7 +10,7 @@ import {
   focus,
   active,
   disabled
-} from 'styled-system'
+} from '@elementary/standard'
 
 import {
   arrayOf,
@@ -18,7 +18,7 @@ import {
   number,
   string
 } from 'prop-types'
-import { propHunter } from '@elementary/higherorder-components'
+import { createElement, propHunter } from '@elementary/higherorder-components'
 import blacklist from './blacklist'
 
 const prop = oneOfType([
@@ -53,7 +53,7 @@ const propTypes = {
   py: prop
 }
 
-const withStyle = (style, props) => Component => {
+const withStyle = (style, props, extras = []) => Component => {
   const Base = styled(Component)([],
     space,
     width,
@@ -63,22 +63,23 @@ const withStyle = (style, props) => Component => {
     hover,
     focus,
     active,
-    disabled
+    disabled,
+    ...extras.map(x => standard[x])
   )
 
   Base.propTypes = propTypes
 
   // Clean this up after styled-components removes whitelisting
   const Comp = styled(Base).attrs(props)([], style)
-
   return Comp
 }
 
-const Tag = propHunter(blacklist)
+const removeProps = propHunter(blacklist)
 
-const hoc = (style, props) => compose(
-  withStyle(style, props),
-  Tag
+const hoc = (style, props, extras) => compose(
+  withStyle(style, props, extras),
+  removeProps,
+  createElement
 )
 
 export default hoc

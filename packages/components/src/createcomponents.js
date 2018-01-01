@@ -5,14 +5,16 @@ const createComponent = (config, components = {}) => {
     type,
     props,
     style,
-    propTypes = {}
+    propTypes = {},
+    extras = [],
+    name
   } = config
   if (!config || !type || !style) return null
 
   const _tag = components[type] || type
 
-  const Component = hoc(style, props)(_tag)
-
+  const Component = hoc(style, props, extras)(_tag)
+  Component.displayName = name
   Component.propTypes = propTypes
   Component.defaultProps = config.defaultProps || {}
 

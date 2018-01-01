@@ -3,9 +3,6 @@
   "version": "1.0.3",
   "description": "Build Processes For Elementary",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "dependencies": {
     "@babel/core": "^7.0.0-beta.35",
     "@babel/plugin-proposal-class-properties": "^7.0.0-beta.36",
@@ -19,6 +16,5 @@
     "webpack-merge": "^4.1.1",
     "webpack-node-externals": "^1.6.0"
   },
-  "author": "Rajat Sharma",
   "license": "MIT"
 }
