@@ -4,13 +4,15 @@ import standard, {
   space,
   width,
   fontSize,
-  color,
   borderRadius,
   hover,
   focus,
   active,
-  disabled
-} from '@elementary/standard'
+  disabled,
+  color
+} from '@elementary/system'
+
+import styles from '../../standard/src/styles'
 
 import {
   arrayOf,
@@ -58,7 +60,7 @@ const withStyle = (style, props, extras = []) => Component => {
     space,
     width,
     fontSize,
-    color,
+    styles.color,
     borderRadius,
     hover,
     focus,

@@ -58,7 +58,7 @@ export const colors = Object.assign({}, flattened, {
   white: '#fff'
 })
 
-export const radius = 4
+export const radii = [4]
 export const font = `-apple-system, BlinkMacSystemFont, sans-serif`
 export const monospace = '"SF Mono", "Roboto Mono", Menlo, monospace'
 
@@ -70,5 +70,5 @@ export default {
   font,
   monospace,
   colors,
-  radius
+  radii
 }

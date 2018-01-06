@@ -33,7 +33,7 @@ Provider.propTypes = {
     ]),
     font: string,
     monospace: string,
-    radius: number
+    radii: arrayOf(number)
   })
 }
 

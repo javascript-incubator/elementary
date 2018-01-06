@@ -1,10 +1,8 @@
 {
-  "name": "@elementary/standard",
+  "name": "@elementary/system",
   "version": "0.1.0",
   "description": "Props Standard for Elementary Components",
-  "directories": {
-    "styles": "dist/styles.js"
-  },
+  "main": "dist/main.js",
   "files": [
     "dist"
   ],

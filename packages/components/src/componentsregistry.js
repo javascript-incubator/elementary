@@ -30,20 +30,18 @@ const components = [
       pr: 3,
       pt: 2,
       pb: 2,
-      color: 'white'
+      color: 'red',
+      bg: 'grey'
     },
     style: props => ({
       fontFamily: 'inherit',
-      fontWeight: bold(props),
       lineHeight: 16 / 14,
       display: 'inline-block',
       verticalAlign: 'middle',
       textAlign: 'center',
       textDecoration: 'none',
-      borderRadius: px(props.theme.radius),
       border: 0,
       appearance: 'none',
-      backgroundColor: color(props)(props.bg),
       '&:hover': {
         boxShadow: `inset 0 0 0 999px ${darken(1 / 8)}`
       },
@@ -51,7 +49,8 @@ const components = [
         outline: 0
       },
       '&:active': {
-        backgroundColor: color(props)(props.bg, 6)
+        borderStyle: 'inset',
+        backgroundColor: darken(1 / 4)
       },
       '&:disabled': {
         opacity: 1 / 4
@@ -68,16 +67,16 @@ const components = [
     style: props => ({
       boxShadow: `inset 0 0 0 2px`,
       '&:hover': {
-        color: color(props)('white'),
-        backgroundColor: color(props)(props.color)
+        color: 'white',
+        backgroundColor: props.color
       },
       '&:focus': {
         boxShadow: `inset 0 0 0 2px, 0 0 0 2px`
       },
       '&:active': {
-        color: color(props)('white'),
-        backgroundColor: color(props)(props.color),
-        boxShadow: `inset 0 0 0 2px ${color(props)(props.color)}, inset 0 0 8px ${darken(1 / 4)}`
+        color: 'white',
+        backgroundColor: props.color,
+        boxShadow: `inset 0 0 0 2px ${props.color}, inset 0 0 8px ${darken(1 / 4)}`
       }
     })
   },
@@ -101,7 +100,7 @@ const components = [
     },
     style: props => ({
       '&:hover': {
-        color: color(props)(props.color),
+        color: props.color,
         backgroundColor: 'transparent'
       },
       '&:focus': {
@@ -132,11 +131,9 @@ const components = [
       display: 'inline-flex',
       alignItems: 'center',
       alignSelf: 'stretch',
-      fontWeight: bold(props),
       textDecoration: 'none',
       whiteSpace: 'nowrap',
       color: 'inherit',
-      backgroundColor: props.active ? darken(1 / 4) : 'transparent',
       cursor: 'pointer',
       '&:hover': {
         backgroundColor: darken(1 / 16)
@@ -167,23 +164,8 @@ const components = [
     props: {
       m: 0
     },
-    style: props => Object.assign(
-      {
-        fontWeight: props.bold
-          ? bold(props)
-          : idx('weights.0', props.theme)
-      },
-      align(props),
-      caps(props)
-    ),
-    propTypes: {
-      left: bool,
-      center: bool,
-      right: bool,
-      justify: bool,
-      bold: bool,
-      caps: bool
-    }
+    style: {},
+    extras: ['textAlign', 'fontWeight']
   },
   {
     name: 'Heading',
@@ -192,18 +174,10 @@ const components = [
       is: 'h2',
       f: 5,
       m: 0,
-      bold: true
+      fontWeight: '600'
     },
     style: {
       lineHeight: 1.25
-    },
-    propTypes: {
-      left: bool,
-      center: bool,
-      right: bool,
-      justify: bool,
-      bold: bool,
-      caps: bool
     }
   },
   {
@@ -328,7 +302,7 @@ const components = [
       verticalAlign: 'middle',
       border: 0,
       boxShadow: `inset 0 0 0 1px ${color(props)('gray2')}`,
-      borderRadius: px(props.theme.radius),
+      // borderRadius: px(props.theme.radius),
       appearance: 'none',
       '&:focus': {
         outline: 'none',
@@ -354,7 +328,7 @@ const components = [
       select: {
         padding: px(idx('space.1', props.theme)),
         boxShadow: `inset 0 0 0 1px ${color(props)('gray2')}`,
-        borderRadius: px(props.theme.radius),
+        // borderRadius: px(props.theme.radius),
 
         '&:focus': {
           boxShadow: `inset 0 0 0 1px ${color(props)('blue')}`
@@ -380,7 +354,7 @@ const components = [
       fontSize: 'inherit',
       border: 0,
       boxShadow: `inset 0 0 0 1px ${color(props)('gray2')}`,
-      borderRadius: px(props.theme.radius),
+      // borderRadius: px(props.theme.radius),
       appearance: 'none',
       '&:focus': {
         outline: 'none',
@@ -567,8 +541,8 @@ const components = [
     },
     style: props => ({
       overflow: 'hidden',
-      boxShadow: `inset 0 0 0 1px ${color(props)('gray2')}, 0 0 4px ${color(props)('gray2')}`,
-      borderRadius: px(props.theme.radius)
+      boxShadow: `inset 0 0 0 1px ${color(props)('gray2')}, 0 0 4px ${color(props)('gray2')}`
+      // borderRadius: px(props.theme.radius)
     })
   },
   {
@@ -597,7 +571,7 @@ const components = [
     props: {},
     style: props => ({
       overflow: 'hidden',
-      borderRadius: px(props.theme.radius),
+      // borderRadius: px(props.theme.radius),
       borderWidth: px(1),
       borderStyle: 'solid'
     })
@@ -641,7 +615,7 @@ const components = [
     style: props => ({
       display: 'block',
       height: px(idx('space.1', props.theme)),
-      borderRadius: px(props.theme.radius),
+      // borderRadius: px(props.theme.radius),
       overflow: 'hidden',
       appearance: 'none',
       '&::-webkit-progress-bar': {
@@ -724,8 +698,8 @@ const components = [
     style: props => ({
       fontWeight: bold(props),
       display: 'inline-block',
-      verticalAlign: 'middle',
-      borderRadius: px(props.theme.radius)
+      verticalAlign: 'middle'
+      // borderRadius: px(props.theme.radius)
     })
   },
   {
@@ -757,7 +731,7 @@ const components = [
       maxWidth: '100vw',
       maxHeight: '100vh',
       overflow: 'auto',
-      borderRadius: px(props.theme.radius),
+      // borderRadius: px(props.theme.radius),
       boxShadow: `0 0 0 60vmax ${darken(1 / 2)}, 0 0 32px ${darken(1 / 4)}`
     })
   },
@@ -1027,8 +1001,8 @@ const components = [
         paddingLeft: px(idx('space.2', props.theme)),
         paddingRight: px(idx('space.2', props.theme)),
         color: color(props)(props.color),
-        backgroundColor: color(props)(props.bg),
-        borderRadius: px(props.theme.radius)
+        backgroundColor: color(props)(props.bg)
+        // borderRadius: px(props.theme.radius)
       },
       '&::after': {
         display: 'none',

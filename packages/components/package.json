@@ -27,6 +27,7 @@
     "@elementary/core": "^0.1.0",
     "@elementary/higherorder-components": "^0.1.1",
     "@elementary/standard": "^0.1.0",
+    "@elementary/system": "^0.1.0",
     "palx": "^1.0.2",
     "prop-types": "^15.6.0",
     "styled-components": "^2.2.0"

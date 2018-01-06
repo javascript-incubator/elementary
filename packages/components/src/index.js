@@ -19,7 +19,7 @@ export {
   fontSizes,
   weights,
   colors,
-  radius
+  radii
 } from './theme'
 export { default as createLibrary } from './createlibrary'
 export { default as createComponent } from './createcomponents'
