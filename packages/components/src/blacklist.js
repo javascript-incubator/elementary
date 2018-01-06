@@ -1,5 +1,4 @@
-import { propTypes } from '@elementary/system'
+import { props } from '@elementary/standard/lib/styles'
 
-const blacklist = Object.keys(propTypes).map(x => Object.keys(propTypes[x])).reduce((acc, a) => [...acc, ...a], [])
-
+const blacklist = props
 export default blacklist

@@ -2,11 +2,8 @@
   "name": "@elementary/standard",
   "version": "0.1.0",
   "description": "Props Standard for Elementary Components",
-  "directories": {
-    "styles": "dist/styles.js"
-  },
   "files": [
-    "dist"
+    "lib"
   ],
   "scripts": {
     "build": "ENV=prod node build.js"

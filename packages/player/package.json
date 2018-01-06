@@ -13,11 +13,11 @@
   "dependencies": {
     "@elementary/components": "^0.1.4",
     "@elementary/higherorder-components": "^0.1.1",
-    "react": "15.6.2",
-    "react-dom": "15.6.2",
     "@storybook/addon-actions": "^3.3.3",
     "@storybook/addon-links": "^3.3.3",
     "@storybook/react": "^3.3.3",
-    "babel-core": "^6.26.0"
+    "babel-core": "^6.26.0",
+    "react": "15.6.2",
+    "react-dom": "15.6.2"
   }
 }

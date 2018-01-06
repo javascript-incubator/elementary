@@ -14,7 +14,15 @@ export const RegistryManager = registry => {
     return registry
   }
 
-  return { map, inspect, getRegistry }
+  function toPropArray () {
+    const concatenator = (acc, x) => acc.concat(x)
+    return Object.values(RegistryManager(registry).map(x => {
+      return (x.styles || x.pseudoStyles).reduce(concatenator, [])
+    }
+    ).getRegistry()).reduce(concatenator, [])
+  }
+
+  return { map, inspect, getRegistry, toPropArray }
 }
 
 // Monoid StyleGroup => Object -> StyleGroup
@@ -49,12 +57,4 @@ export const StyleLensManager = (styleLenses) => {
   }
 
   return { map, fold }
-}
-
-export const combine = (...styleLenses) => props => {
-  return styleLenses.map(x => x(props)).reduce((acc, x) => acc.concat(x), StyleGroup().empty()).getStyle()
-}
-
-export const logger = typeClass => {
-  console.log((typeClass.inspect && typeClass.inspect()) || typeClass)
 }

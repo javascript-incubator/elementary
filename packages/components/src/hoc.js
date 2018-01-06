@@ -1,24 +1,14 @@
 import { compose } from '@elementary/core'
 import styled from 'styled-components'
-import standard, {
-  space,
-  width,
-  fontSize,
-  borderRadius,
-  hover,
-  focus,
-  active,
-  disabled,
-  color
-} from '@elementary/system'
 
-import styles from '../../standard/src/styles'
+import styles, { space, color, dimensions, borderRadius, states, props } from '@elementary/standard/lib/styles'
 
 import {
-  arrayOf,
   oneOfType,
   number,
-  string
+  string,
+  func,
+  object
 } from 'prop-types'
 import { createElement, propHunter } from '@elementary/higherorder-components'
 import blacklist from './blacklist'
@@ -26,47 +16,20 @@ import blacklist from './blacklist'
 const prop = oneOfType([
   number,
   string,
-  arrayOf(oneOfType([
-    number,
-    string
-  ]))
+  func,
+  object
 ])
 
-const propTypes = {
-  width: prop,
-  w: prop,
-  fontSize: prop,
-  f: prop,
-  color: prop,
-  bg: prop,
-  m: prop,
-  mt: prop,
-  mr: prop,
-  mb: prop,
-  ml: prop,
-  mx: prop,
-  my: prop,
-  p: prop,
-  pt: prop,
-  pr: prop,
-  pb: prop,
-  pl: prop,
-  px: prop,
-  py: prop
-}
+const propTypes = props.reduce((acc, x) => ({...acc, [x]: prop}), {})
 
 const withStyle = (style, props, extras = []) => Component => {
   const Base = styled(Component)([],
     space,
-    width,
-    fontSize,
-    styles.color,
+    dimensions,
+    color,
     borderRadius,
-    hover,
-    focus,
-    active,
-    disabled,
-    ...extras.map(x => standard[x])
+    states,
+    ...extras.map(x => styles[x])
   )
 
   Base.propTypes = propTypes
@@ -76,7 +39,7 @@ const withStyle = (style, props, extras = []) => Component => {
   return Comp
 }
 
-const removeProps = propHunter(blacklist)
+export const removeProps = propHunter(blacklist)
 
 const hoc = (style, props, extras) => compose(
   withStyle(style, props, extras),

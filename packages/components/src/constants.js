@@ -6,22 +6,22 @@ const breakpoints = [
 
 const space = [
   0,
-  8,
-  16,
-  32,
-  64
+  '8px',
+  '16px',
+  '32px',
+  '64px'
 ]
 
 const fontSizes = [
-  12,
-  14,
-  16,
-  20,
-  24,
-  32,
-  48,
-  64,
-  72
+  '12px',
+  '14px',
+  '16px',
+  '20px',
+  '24px',
+  '32px',
+  '48px',
+  '64px',
+  '72px'
 ]
 
 module.exports = {
