@@ -1,6 +1,6 @@
 {
   "name": "@elementary/components",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Components you can use ruthlessly in your everyday React Projects.",
   "main": "lib/index.js",
   "scripts": {
@@ -12,10 +12,11 @@
   "keywords": [
     "react",
     "styled-components",
-    "grid",
-    "flexbox",
-    "layout",
-    "css"
+    "elementary",
+    "components",
+    "glamorous",
+    "css",
+    "cssinjs"
   ],
   "license": "MIT",
   "devDependencies": {
