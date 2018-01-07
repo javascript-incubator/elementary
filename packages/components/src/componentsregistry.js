@@ -374,7 +374,6 @@ const components = [
       }
     })
   },
-
   {
     name: 'Image',
     type: 'img',

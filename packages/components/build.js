@@ -1,4 +1,4 @@
-const buildConfig = require('@elementary/build')
+const buildConfig = require('@elementary/charger')
 const paths = require('./paths')
 
 buildConfig(paths)

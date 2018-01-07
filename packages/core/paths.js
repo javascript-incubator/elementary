@@ -2,7 +2,7 @@ const path = require('path')
 
 const output = {
   library: '@elementary/core',
-  path: path.resolve(__dirname, './', 'dist'),
+  path: path.resolve(__dirname, './', 'lib'),
   filename: 'main.js',
   libraryTarget: 'commonjs2'
 }

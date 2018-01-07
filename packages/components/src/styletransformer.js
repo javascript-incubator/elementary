@@ -1,7 +1,6 @@
 import { compose } from '@elementary/core'
 import styled from 'styled-components'
-
-import styles, { space, color, dimensions, borderRadius, states, props } from '@elementary/standard/lib/styles'
+import styles, { props as blacklist, space, color, dimensions, borderRadius, states, props, transition } from '@elementary/standard/lib/styles'
 
 import {
   oneOfType,
@@ -10,8 +9,7 @@ import {
   func,
   object
 } from 'prop-types'
-import { createElement, propHunter } from '@elementary/higherorder-components'
-import blacklist from './blacklist'
+import { createElement, propHunter } from '@elementary/transformers'
 
 const prop = oneOfType([
   number,
@@ -29,6 +27,7 @@ const withStyle = (style, props, extras = []) => Component => {
     color,
     borderRadius,
     states,
+    transition,
     ...extras.map(x => styles[x])
   )
 

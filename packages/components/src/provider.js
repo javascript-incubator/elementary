@@ -9,7 +9,7 @@ import {
   string,
   number
 } from 'prop-types'
-import theme from './theme'
+import theme from './constants'
 
 const Base = styled.div([], props => ({
   fontFamily: props.theme.font || theme.font
@@ -32,8 +32,7 @@ Provider.propTypes = {
       array
     ]),
     font: string,
-    monospace: string,
-    radii: arrayOf(number)
+    monospace: string
   })
 }
 

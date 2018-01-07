@@ -35,6 +35,9 @@ const registry = {
   },
   states: {
     pseudoStyles: [['active'], ['hover'], ['focus'], ['visited']]
+  },
+  transition: {
+    styles: [['transition']]
   }
 }
 

@@ -2,12 +2,12 @@
   "name": "@elementary/components",
   "version": "0.1.4",
   "description": "Components you can use ruthlessly in your everyday React Projects.",
-  "main": "dist/main.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "ENV=prod node build.js"
   },
   "files": [
-    "dist"
+    "lib"
   ],
   "keywords": [
     "react",
@@ -19,13 +19,13 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@elementary/build": "^1.0.3",
+    "@elementary/charger": "^1.0.3",
     "lerna": "^2.5.1",
     "react": "^16.2.0"
   },
   "dependencies": {
     "@elementary/core": "^0.1.0",
-    "@elementary/higherorder-components": "^0.1.1",
+    "@elementary/transformers": "^0.1.1",
     "@elementary/standard": "^0.1.0",
     "prop-types": "^15.6.0",
     "styled-components": "^2.2.0"

@@ -2,6 +2,7 @@
   "name": "@elementary/standard",
   "version": "0.1.0",
   "description": "Props Standard for Elementary Components",
+  "main": "lib/index.js",
   "files": [
     "lib"
   ],
@@ -13,7 +14,7 @@
     "prop-types": "^15.6.0"
   },
   "devDependencies": {
-    "@elementary/build": "^1.0.3",
+    "@elementary/charger": "^1.0.3",
     "react": "^16.2.0"
   }
 }

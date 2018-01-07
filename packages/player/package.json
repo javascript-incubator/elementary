@@ -12,7 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "@elementary/components": "^0.1.4",
-    "@elementary/higherorder-components": "^0.1.1",
+    "@elementary/transformers": "^0.1.1",
     "@storybook/addon-actions": "^3.3.3",
     "@storybook/addon-links": "^3.3.3",
     "@storybook/react": "^3.3.3",

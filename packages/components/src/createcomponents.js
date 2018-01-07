@@ -1,4 +1,4 @@
-import hoc from './hoc'
+import hoc from './styletransformer'
 
 const createComponent = (config, components = {}) => {
   const {

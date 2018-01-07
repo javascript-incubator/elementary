@@ -1,10 +1,10 @@
 {
-  "name": "@elementary/higherorder-components",
+  "name": "@elementary/transformers",
   "version": "0.1.1",
   "description": "Elementary Higher Order Components",
-  "main": "dist/main.js",
+  "main": "lib/main.js",
   "files": [
-    "dist"
+    "lib"
   ],
   "scripts": {
     "build": "ENV=prod node build.js"
@@ -14,7 +14,7 @@
     "prop-types": "^15.6.0"
   },
   "devDependencies": {
-    "@elementary/build": "^1.0.3",
+    "@elementary/charger": "^1.0.3",
     "react": "15.6.2"
   }
 }

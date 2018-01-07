@@ -10,7 +10,7 @@ const output = {
 module.exports = {
   output,
   entry: {
-    standard: path.resolve(__dirname, './', 'src', 'index.js'),
+    index: path.resolve(__dirname, './', 'src', 'index.js'),
     styles: path.resolve(__dirname, './', 'src', 'styles.js')
   }
 }

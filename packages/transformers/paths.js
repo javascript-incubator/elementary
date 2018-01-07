@@ -1,8 +1,8 @@
 const path = require('path')
 
 const output = {
-  library: '@elementary/higherorder-components',
-  path: path.resolve(__dirname, './', 'dist'),
+  library: '@elementary/transformers',
+  path: path.resolve(__dirname, './', 'lib'),
   filename: 'main.js',
   libraryTarget: 'commonjs2'
 }

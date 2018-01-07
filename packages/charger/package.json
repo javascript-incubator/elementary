@@ -1,5 +1,5 @@
 {
-  "name": "@elementary/build",
+  "name": "@elementary/charger",
   "version": "1.0.3",
   "description": "Build Processes For Elementary",
   "main": "index.js",

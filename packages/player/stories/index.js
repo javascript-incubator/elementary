@@ -2,10 +2,9 @@ import React from 'react'
 
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-// import { linkTo } from '@storybook/addon-links'
 
 import { Button, Flex, Box } from '@elementary/components'
-import { IdentityComponent } from '@elementary/higherorder-components'
+import { IdentityComponent } from '@elementary/transformers'
 
 storiesOf('Button', module)
   .add('with text', () => <Button f={3} is='span' color='black' bg='white' hover={{color: 'white'}} onClick={action('clicked')}>Hello Button</Button>)

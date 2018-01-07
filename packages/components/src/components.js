@@ -1,20 +1,10 @@
-import components from './components'
+import components from './componentsregistry'
+import Provider from './provider'
+import createLibrary from './createlibrary'
 
-export { default as Provider } from './provider'
-export { default as ServerSideHelpers } from './serversidehelpers'
-export { default as componentize } from './componentize'
-export { default as components } from './components'
+const library = createLibrary(components)
 
-export {
-  default as theme,
-  breakpoints,
-  space,
-  font,
-  monospace,
-  fontSizes,
-  weights,
-  colors
-} from './constants'
+const Components = Object.assign({}, library, { Provider })
 
 export const {
   Button,
@@ -69,6 +59,6 @@ export const {
   Flex,
   Row,
   Column
-} = components
+} = library
 
-export { default as util } from './utils'
+export default Components

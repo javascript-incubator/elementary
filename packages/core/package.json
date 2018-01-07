@@ -2,15 +2,15 @@
   "name": "@elementary/core",
   "version": "0.1.0",
   "description": "Core Functions for Elementary Package",
-  "main": "dist/main.js",
+  "main": "lib/main.js",
   "files": [
-    "dist"
+    "lib"
   ],
   "scripts": {
     "build": "ENV=prod node build.js"
   },
   "license": "MIT",
   "devDependencies": {
-    "@elementary/build": "^1.0.3"
+    "@elementary/charger": "^1.0.3"
   }
 }
