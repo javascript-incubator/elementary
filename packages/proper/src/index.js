@@ -1,3 +1,4 @@
-import { Maybe } from '@elementary/core'
-
-export const getProp = (prop) => object => Maybe(object[prop])
+// import { Maybe } from '@elementary/core'
+const { Maybe } = require('@elementary/core')
+const getProp = (prop) => object => Maybe(object[prop])
+module.exports = getProp
