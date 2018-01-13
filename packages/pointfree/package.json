@@ -2,11 +2,14 @@
   "name": "@elementary/pointfree",
   "version": "0.1.0",
   "description": "Helpers Functions to convert your Pointfull Code to Pointfree Code",
-  "main": "index.js",
+  "main": "lib/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "ENV=prod node build.js"
   },
+  "files": [
+    "lib"
+  ],
   "keywords": [
     "pointfree",
     "fp",
