@@ -1,7 +1,7 @@
-const borderStylePropFrame = dir => `border${dir}Style`
-const borderWidthPropFrame = dir => `border${dir}Width`
-const borderColorPropFrame = dir => `border${dir}Color`
-const borderOnly = dir => `border${dir}`
+const borderStylePropFrame = dir => [`border${dir}Style`]
+const borderWidthPropFrame = dir => [`border${dir}Width`]
+const borderColorPropFrame = dir => [`border${dir}Color`]
+const borderOnly = dir => [`border${dir}`]
 
 const directions = ['Top', 'Bottom', 'Left', 'Right', '']
 

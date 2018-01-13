@@ -11,7 +11,7 @@ storiesOf('Button', module)
   .add('with some emoji', () => <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>)
   .add('identity', () => <IdentityComponent F={Button} onClick={action('clicked')}>😀 😎 👍 💯</IdentityComponent>)
   .add('Flex Test', () =>
-    <Flex flexDirection='column' justify='space-around' align='center' wrap>
+    <Flex flexDirection='column' justifyContent='space-around' align='center' borderTopStyle='solid' borderTopColor='green' borderTopWidth='2px'>
       <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>
       <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>
       <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>

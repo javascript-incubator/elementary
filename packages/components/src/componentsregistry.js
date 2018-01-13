@@ -62,7 +62,8 @@ const components = [
         backgroundColor: props.color,
         boxShadow: `inset 0 0 0 2px ${props.color}, inset 0 0 8px ${darken(1 / 4)}`
       }
-    })
+    }),
+    extras: ['text']
   },
   {
     name: 'ButtonCircle',
@@ -73,7 +74,8 @@ const components = [
     },
     style: props => ({
       borderRadius: '99999px'
-    })
+    }),
+    extras: ['text']
   },
   {
     name: 'ButtonTransparent',
@@ -94,7 +96,8 @@ const components = [
         backgroundColor: 'transparent',
         boxShadow: `inset 0 0 0 2px, inset 0 0 8px ${darken(1 / 4)}`
       }
-    })
+    }),
+    extras: ['text']
   },
   {
     name: 'Link',

@@ -1,6 +1,6 @@
 {
   "name": "@elementary/components",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "description": "Components you can use ruthlessly in your everyday React Projects.",
   "main": "lib/index.js",
   "scripts": {
@@ -26,8 +26,8 @@
   },
   "dependencies": {
     "@elementary/core": "^0.1.0",
-    "@elementary/transformers": "^0.1.1",
     "@elementary/standard": "^0.1.0",
+    "@elementary/transformers": "^0.1.1",
     "prop-types": "^15.6.0",
     "styled-components": "^2.2.0"
   }
