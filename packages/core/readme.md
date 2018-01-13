@@ -18,3 +18,14 @@ $ yarn add @elementary/core
 import { compose } from '@elementary/core'
 compose(f, g)(val) === f(g(val)) //true
 ```
+
+#### Maybe
+
+```js 
+import { Maybe } from '@elementary/core'
+
+Maybe().of(1).map(x => x/2) //=> 0.5
+Maybe().of(null).map(x => x/2) //=> null
+```
+
+** Api is still experimental, please don't use core's apis directly**
