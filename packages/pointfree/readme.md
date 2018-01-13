@@ -19,6 +19,6 @@ _Is there any way so that I can remove those `.` 😕_
 import { then } from '@elementary/pointfree'
 import { compose } from '@elementary/core'
 
-compose(PromiseA, then(x => PromiseB(x)), then(x => PromiseC(x)), then(......))
+compose(then(......), then(x => PromiseC(x)), then(x => PromiseB(x)), PromiseA)()
 ```
 _Yay, Thank you Pointfree 😃_

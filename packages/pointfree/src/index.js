@@ -3,5 +3,6 @@ import create from './create'
 
 const pointfree = methodRegsitry.reduce((acc, x) => ({ ...acc, [x]: create(x) }), {})
 
-export default pointfree
+export const { then, map, ap, chain, join, concat, filter, of, reduce, traverse, empty } = pointfree
+
 export { default as create } from './create'
