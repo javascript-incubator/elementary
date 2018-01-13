@@ -1,0 +1,25 @@
+{
+  "name": "@elementary/proper",
+  "version": "0.1.0",
+  "description": "Play with Object properties",
+  "main": "lib/main.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "ENV=prod node build.js"
+  },
+  "keywords": [
+    "functional",
+    "programming",
+    "properties"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@elementary/core": "^0.1.1"
+  },
+  "devDependencies": {
+    "@elementary/charger": "^1.0.3"
+  }
+}

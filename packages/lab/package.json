@@ -4,7 +4,7 @@
   "description": "Testing Lab for elementary packages",
   "main": "index.js",
   "scripts": {
-    "test": "ava index.js"
+    "test": "ava getproptest.js"
   },
   "keywords": [
     "labs",
