@@ -1,4 +1,5 @@
-// import { Maybe } from '@elementary/core'
-const { Maybe } = require('@elementary/core')
-const getProp = (prop) => object => Maybe(object[prop])
-module.exports = getProp
+import { Maybe } from '@elementary/core'
+import accessors from './accessor'
+
+export const getProp = (prop) => object => Maybe(object[prop])
+export const { access, accessRaw } = accessors
