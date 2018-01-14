@@ -48,3 +48,4 @@ access('object.deepObject.musketeers')(dumas) //=> 3
 access('object.deepObject.samurais')(dumas) //=> null
 access('object.noObject.musketeers')(dumas) //=> null
 ```
+Also includes `omit` and `pick` functions from Ramda
