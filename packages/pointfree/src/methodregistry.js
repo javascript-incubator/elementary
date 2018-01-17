@@ -1,1 +1,1 @@
-export default ['then', 'map', 'ap', 'chain', 'join', 'concat', 'filter', 'of', 'reduce', 'traverse', 'empty']
+export default ['then', 'map', 'ap', 'chain', 'join', 'concat', 'filter', 'of', 'reduce', 'traverse', 'empty', 'fold']
