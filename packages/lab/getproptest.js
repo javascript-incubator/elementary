@@ -1,6 +1,6 @@
 import test from 'ava'
 const { compose, Maybe } = require('../core/lib/main')
-const { getProp } = require('../proper/lib/main')
+const { getProp, toValueArray } = require('../proper/lib/main')
 const { map, join, chain, concat } = require('../pointfree/lib/main')
 
 const b = {
@@ -15,6 +15,7 @@ const c = {
   name: 'Test'
 }
 
+console.log(toValueArray(c))
 // One Map only
 test(t => t.is(compose(map(x => getProp('name')(x).get()), map(x => getProp('key2')(x).get()), getProp('key'))(b).get(), 2))
 // Multiple Maps to get the value

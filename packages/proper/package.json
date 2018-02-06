@@ -1,6 +1,6 @@
 {
   "name": "@elementary/proper",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "description": "Play with Object properties",
   "main": "lib/main.js",
   "files": [
