@@ -3,18 +3,18 @@ import { ServerStyleSheet } from 'styled-components'
 function ServerStyles () {
   let sheet = new ServerStyleSheet()
 
-  function getStyleTags () {
-    return sheet.getStyleTags()
+  function getStyleTags (...x) {
+    return sheet.getStyleTags(...x)
   }
 
-  function collectStyles () {
-    return sheet.collectStyles()
+  function collectStyles (...x) {
+    return sheet.collectStyles(...x)
   }
 
-  function getStyleElements () {
-    return sheet.getStyleElements()
+  function getStyleElement (...x) {
+    return sheet.getStyleElement(...x)
   }
-  return { getStyleTags, collectStyles, getStyleElements }
+  return { getStyleTags, collectStyles, getStyleElement }
 }
 
 export default ServerStyles
