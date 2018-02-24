@@ -19,6 +19,13 @@ import { compose } from '@elementary/core'
 compose(f, g)(val) === f(g(val)) //true
 ```
 
+#### Ccompose
+
+```js
+import { ccompose } from '@elementary/core'
+compose(f, g)(functor) === functor.map(f).map(g) //true and will be iterated once only
+```
+
 #### Maybe
 
 ```js 
