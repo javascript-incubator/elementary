@@ -1,7 +1,7 @@
 import { uncurry } from '@elementary/core'
 
 const concat = uncurry(partial => object => {
-  if (object.concat) {
+  if (typeof object.concat === 'function') {
     return object.concat(partial)
   }
   return {...object, ...partial}

@@ -49,3 +49,13 @@ access('object.deepObject.samurais')(dumas) //=> null
 access('object.noObject.musketeers')(dumas) //=> null
 ```
 Also includes `omit` and `pick` functions from Ramda
+
+### v 0.2.0
+
+`first`, `last` and `range`
+
+```js
+first([1, 2, 3]) //=> 1
+last([1, 2, 3]) //=> 3
+range(3, 8) //=> [3, 4, 5, 6, 7]
+```
