@@ -67,4 +67,10 @@ range(3, 8) //=> [3, 4, 5, 6, 7]
 ```js
 flatMap(x => x.concat(1), [[1, 2], [3, 4]]) //=>  [1, 2, 1, 3, 4, 1]
 ```
+`binder`
 
+Merge multiple functions to one
+
+```js
+binder().add(flatMap(x => x.concat(1))).add(first).invoke([[1, 2], [3, 4]])
+```
