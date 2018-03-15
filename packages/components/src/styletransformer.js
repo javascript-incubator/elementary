@@ -1,6 +1,6 @@
 import { compose } from '@elementary/core'
 import styled from 'styled-components'
-import styles, { props as blacklist, space, color, dimensions, borderRadius, states, props, transition, border } from '@elementary/standard/lib/styles'
+import styles, { props as blacklist, space, color, dimensions, borderRadius, states, props, transition, border, transform } from '@elementary/standard/lib/styles'
 
 import {
   oneOfType,
@@ -29,6 +29,7 @@ const withStyle = (style, props, extras = []) => Component => {
     states,
     transition,
     border,
+    transform,
     ...extras.map(x => styles[x])
   )
 
