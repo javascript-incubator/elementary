@@ -3,7 +3,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
-import { Button, Flex, Box } from '@elementary/components'
+import { Button, Flex, Box } from '../../components/lib'
 import { IdentityComponent } from '@elementary/transformers'
 
 storiesOf('Button', module)
@@ -12,7 +12,7 @@ storiesOf('Button', module)
   .add('identity', () => <IdentityComponent F={Button} onClick={action('clicked')}>😀 😎 👍 💯</IdentityComponent>)
   .add('Flex Test', () =>
     <Flex flexDirection='column' justifyContent='space-around' align='center' borderTopStyle='solid' borderTopColor='green' borderTopWidth='2px'>
-      <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>
+      <Button onClick={action('clicked')} transform="rotate(180deg)">😀 😎 👍 💯</Button>
       <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>
       <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>
       <Box flex={[ 1, 2, 4 ]} ><Button onClick={action('clicked')}>Last</Button></Box>

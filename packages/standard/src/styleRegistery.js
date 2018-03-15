@@ -40,7 +40,7 @@ const registry = {
     styles: [['transition']]
   },
   transform: {
-    styles: [['tranform']]
+    styles: [['transform']]
   }
 }
 

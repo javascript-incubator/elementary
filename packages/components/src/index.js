@@ -1,7 +1,6 @@
 import components from './components'
 
 export { default as Provider } from './provider'
-export { default as ServerSideHelpers } from './serversidehelpers'
 export { default as componentize } from './componentize'
 export { default as components } from './components'
 export { ServerStyleSheet } from 'styled-components'
