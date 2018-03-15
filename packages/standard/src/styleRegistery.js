@@ -38,6 +38,9 @@ const registry = {
   },
   transition: {
     styles: [['transition']]
+  },
+  transform: {
+    styles: [['tranform']]
   }
 }
 
