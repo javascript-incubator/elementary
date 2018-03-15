@@ -1,5 +1,5 @@
 import test from 'ava'
-const { first, last, range } = require('../proper/lib/main')
+const { first, last, range, flatMap } = require('../proper/lib/main')
 
 const testArray1 = [1]
 
@@ -22,3 +22,7 @@ test(t => t.is(first(testObject2), null))
 test(t => t.is(last(testObject2), null))
 
 test(t => t.deepEqual(range(3, 8), [3, 4, 5, 6, 7]))
+
+const testArr3 = [[1, 2], [3, 4]]
+
+test(t => t.deepEqual(flatMap(x => x.concat(1), testArr3), [1, 2, 1, 3, 4, 1]))
