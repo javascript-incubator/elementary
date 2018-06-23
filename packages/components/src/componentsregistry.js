@@ -699,6 +699,11 @@ const components = [
     style: { boxSizing: 'border-box' }
   },
   {
+    name: 'Span',
+    type: 'span',
+    extras: ['flexContainer', 'flexBox']
+  },
+  {
     name: 'Flex',
     type: 'div',
     extras: ['flexContainer'],

@@ -1,19 +1,21 @@
-import React from 'react'
-
-const propHunter = (blacklist = []) => Com => {
-  const clean = huntProps(blacklist)
-  const PropHunterElement = props => <Com {...clean(props)} />
-  PropHunterElement.displayName = 'PropHunterElement'
-  return PropHunterElement
-}
+import React from 'react';
+import { filter } from '@elementary/proper';
 
 export const huntProps = blacklist => props => {
-  const next = {}
-  for (let key in props) {
-    if (blacklist.includes(key)) continue
-    next[key] = props[key]
-  }
-  return next
-}
+  const next = {};
+  Object.keys(props).map(key => {
+    if (blacklist.includes(key)) return null;
+    next[key] = props[key];
+    return null;
+  });
+  return next;
+};
 
-export default propHunter
+const propHunter = (blacklist = []) => Com => {
+  const clean = huntProps(blacklist);
+  const PropHunterElement = props => <Com {...clean(props)} />;
+  PropHunterElement.displayName = 'PropHunterElement';
+  return PropHunterElement;
+};
+
+export default propHunter;

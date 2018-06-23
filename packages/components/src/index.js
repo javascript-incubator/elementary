@@ -66,6 +66,7 @@ export const {
   Sticky,
   Overlay,
   Box,
+  Span,
   Flex,
   Row,
   Column

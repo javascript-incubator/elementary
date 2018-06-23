@@ -1,14 +1,13 @@
 {
   "name": "@elementary/components",
-  "version": "0.2.2",
-  "description": "Components you can use ruthlessly in your everyday React Projects.",
+  "version": "0.2.2-alpha-2",
+  "description":
+    "Components you can use ruthlessly in your everyday React Projects.",
   "main": "lib/index.js",
   "scripts": {
     "build": "ENV=prod node build.js"
   },
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "keywords": [
     "react",
     "styled-components",
@@ -29,6 +28,6 @@
     "@elementary/standard": "0.1.4",
     "@elementary/transformers": "^0.1.1",
     "prop-types": "^15.6.0",
-    "styled-components": "^2.4.0"
+    "styled-components": "2.4.0"
   }
 }

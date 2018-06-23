@@ -1,12 +1,12 @@
-import React from 'react'
-import PT from 'prop-types'
+import React from 'react';
+import PT from 'prop-types';
 
-const IdentityComponent = ({ F, ...props }) => <F {...props} />
+const IdentityComponent = ({ F, ...props }) => <F {...props} />;
 
-IdentityComponent.displayName = 'IdentityComponent'
+IdentityComponent.displayName = 'IdentityComponent';
 
 IdentityComponent.propTypes = {
-  F: PT.func
-}
+  F: PT.func.isRequired,
+};
 
-export default IdentityComponent
+export default IdentityComponent;
