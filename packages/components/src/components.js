@@ -59,7 +59,7 @@ export const {
   Span,
   Flex,
   Row,
-  Column
+  Column,
 } = library
 
 export default Components

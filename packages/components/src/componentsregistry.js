@@ -13,8 +13,6 @@ const components = [
       pr: space[3],
       pt: space[2],
       pb: space[2],
-      color: 'white',
-      bg: 'black'
     },
     style: props => ({
       fontFamily: 'inherit',
@@ -69,8 +67,10 @@ const components = [
     name: 'ButtonCircle',
     type: 'Button',
     props: {
-      pl: space[3],
-      pr: space[3]
+      pl: space[2],
+      pr: space[2],
+      pt: space[2],
+      pb: space[2],
     },
     style: props => ({
       borderRadius: '99999px'
@@ -701,12 +701,13 @@ const components = [
   {
     name: 'Span',
     type: 'span',
-    extras: ['flexContainer', 'flexBox']
+    extras: ['flexContainer', 'flexBox'],
+    style: {}
   },
   {
     name: 'Flex',
     type: 'div',
-    extras: ['flexContainer'],
+    extras: ['flexContainer', 'boxShadow'],
     style: { display: 'flex' }
   },
   {
