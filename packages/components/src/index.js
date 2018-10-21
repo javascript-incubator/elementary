@@ -13,7 +13,7 @@ export {
   monospace,
   fontSizes,
   weights,
-  colors
+  colors,
 } from './constants'
 
 export const {
@@ -68,7 +68,7 @@ export const {
   Box,
   Flex,
   Row,
-  Column
+  Column,
 } = components
 
 export { default as util } from './utils'

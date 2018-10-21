@@ -7,12 +7,12 @@ import {
   array,
   object,
   string,
-  number
+  number,
 } from 'prop-types'
 import theme from './constants'
 
 const Base = styled.div([], props => ({
-  fontFamily: props.theme.font || theme.font
+  fontFamily: props.theme.font || theme.font,
 }))
 
 const Provider = props => (
@@ -27,13 +27,10 @@ Provider.propTypes = {
     space: arrayOf(number),
     fontSizes: arrayOf(number),
     weights: arrayOf(number),
-    colors: oneOfType([
-      object,
-      array
-    ]),
+    colors: oneOfType([object, array]),
     font: string,
-    monospace: string
-  })
+    monospace: string,
+  }),
 }
 
 export default Provider

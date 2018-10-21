@@ -58,7 +58,7 @@ export const {
   Box,
   Flex,
   Row,
-  Column
+  Column,
 } = library
 
 export default Components

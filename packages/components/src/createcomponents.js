@@ -1,14 +1,7 @@
 import hoc from './styletransformer'
 
 const createComponent = (config, components = {}) => {
-  const {
-    type,
-    props,
-    style,
-    propTypes = {},
-    extras = [],
-    name
-  } = config
+  const { type, props, style, propTypes = {}, extras = [], name } = config
   if (!config || !type || !style) return null
 
   const _tag = components[type] || type

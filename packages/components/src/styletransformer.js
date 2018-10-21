@@ -1,27 +1,28 @@
 import { compose } from '@elementary/core'
 import styled from 'styled-components'
-import styles, { props as blacklist, space, color, dimensions, borderRadius, states, props, transition, border, transform } from '@elementary/standard/lib/styles'
+import styles, {
+  props as blacklist,
+  space,
+  color,
+  dimensions,
+  borderRadius,
+  states,
+  props,
+  transition,
+  border,
+  transform,
+} from '@elementary/standard/lib/styles'
 
-import {
-  oneOfType,
-  number,
-  string,
-  func,
-  object
-} from 'prop-types'
+import { oneOfType, number, string, func, object } from 'prop-types'
 import { createElement, propHunter } from '@elementary/transformers'
 
-const prop = oneOfType([
-  number,
-  string,
-  func,
-  object
-])
+const prop = oneOfType([number, string, func, object])
 
-const propTypes = props.reduce((acc, x) => ({...acc, [x]: prop}), {})
+const propTypes = props.reduce((acc, x) => ({ ...acc, [x]: prop }), {})
 
 const withStyle = (style, props, extras = []) => Component => {
-  const Base = styled(Component)([],
+  const Base = styled(Component)(
+    [],
     space,
     dimensions,
     color,
@@ -30,7 +31,7 @@ const withStyle = (style, props, extras = []) => Component => {
     transition,
     border,
     transform,
-    ...extras.map(x => styles[x])
+    ...extras.map(x => styles[x]),
   )
 
   Base.propTypes = propTypes
@@ -42,10 +43,11 @@ const withStyle = (style, props, extras = []) => Component => {
 
 export const removeProps = propHunter(blacklist)
 
-const hoc = (style, props, extras) => compose(
-  withStyle(style, props, extras),
-  removeProps,
-  createElement
-)
+const hoc = (style, props, extras) =>
+  compose(
+    withStyle(style, props, extras),
+    removeProps,
+    createElement,
+  )
 
 export default hoc
