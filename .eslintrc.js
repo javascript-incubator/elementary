@@ -1,7 +1,5 @@
 module.exports = {
-  "parser": "babel-eslint",
-  "plugins": [
-    "react"
-  ],
-  "extends": ["standard", "standard-react"]
-};
+  parser: 'babel-eslint',
+  plugins: ['prettier', 'react'],
+  extends: ['standard', 'standard-react', 'prettier'],
+}

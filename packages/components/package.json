@@ -6,9 +6,7 @@
   "scripts": {
     "build": "ENV=prod node build.js"
   },
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "keywords": [
     "react",
     "styled-components",
@@ -22,13 +20,14 @@
   "devDependencies": {
     "@elementary/charger": "^1.0.3",
     "lerna": "^2.5.1",
-    "react": "^16.2.0"
+    "react": "16.5.2",
+    "react-dom": "16.5.2"
   },
   "dependencies": {
     "@elementary/core": "^0.1.0",
     "@elementary/standard": "0.1.4",
     "@elementary/transformers": "^0.1.1",
     "prop-types": "^15.6.0",
-    "styled-components": "^2.4.0"
+    "styled-components": "4.0.0"
   }
 }
