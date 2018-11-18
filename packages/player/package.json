@@ -11,13 +11,15 @@
   "author": "Rajat Sharma",
   "license": "MIT",
   "dependencies": {
-    "@elementary/components": "^0.1.4",
+    "@babel/core": "^7.1.6",
+    "@elementary/components": "^0.3.0-beta.2",
     "@elementary/transformers": "^0.1.1",
     "@storybook/addon-actions": "^3.3.3",
     "@storybook/addon-links": "^3.3.3",
-    "@storybook/react": "^3.3.3",
+    "@storybook/react": "^4.0.7",
     "babel-core": "^6.26.0",
-    "react": "15.6.2",
-    "react-dom": "15.6.2"
+    "babel-loader": "^8.0.4",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
   }
 }

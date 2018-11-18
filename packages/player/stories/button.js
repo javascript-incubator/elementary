@@ -9,10 +9,19 @@ import {
   ButtonTransparent,
   BlockLink,
   Text,
+  Banner,
 } from '@elementary/components'
 
+console.log(Button)
 storiesOf('ElementaryButton', module)
   .add('Just Button', () => <Button>Just Button</Button>)
+  .add('Banner', () => (
+    <Banner
+      h="251px"
+      display="flex"
+      backgroundImage="https://img.game.co.uk/ml2/6/5/5/9/655908_scr5_a.png"
+    />
+  ))
   .add('Outline Button', () => <ButtonOutline>Outline Button</ButtonOutline>)
   .add('Circle Button', () => <ButtonCircle>Outline Button</ButtonCircle>)
   .add('ButtonTransparent', () => (
