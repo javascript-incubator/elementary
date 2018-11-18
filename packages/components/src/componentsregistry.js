@@ -457,9 +457,9 @@ const components = [
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      display: 'flex',
     },
     style: props => ({
+      display: 'flex',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundImage: props.backgroundImage
@@ -484,12 +484,11 @@ const components = [
     props: {
       f: fontSizes[2],
       p: space[2],
-    },
-    style: props => ({
       fontWeight: 'bolder',
       borderBottomWidth: '1px',
       borderBottomStyle: 'solid',
-    }),
+    },
+    style: props => ({}),
     extras: ['text'],
   },
   {
@@ -498,12 +497,11 @@ const components = [
     props: {
       f: fontSizes[1],
       p: space[2],
-    },
-    style: props => ({
       fontWeight: 'bolder',
       borderTopWidth: '1px',
       borderTopStyle: 'solid',
-    }),
+    },
+    style: props => ({}),
     extras: ['text'],
   },
   {
@@ -539,6 +537,7 @@ const components = [
       minHeight: '48px',
       alignItems: 'center',
     },
+    extras: ['flexContainer', 'flexBox'],
   },
   {
     name: 'Badge',
@@ -688,7 +687,7 @@ const components = [
   {
     name: 'Flex',
     type: 'div',
-    extras: ['flexContainer'],
+    extras: ['flexContainer', 'flexBox'],
     style: { display: 'flex' },
   },
   {
