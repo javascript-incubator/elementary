@@ -13,17 +13,15 @@ const components = [
       pr: space[3],
       pt: space[2],
       pb: space[2],
-      color: 'white',
-      bg: 'black',
       hover: { boxShadow: `inset 0 0 0 999px ${darken(1 / 8)}` },
       focus: { outline: 0 },
       active: { borderStyle: 'inset', backgroundColor: darken(3 / 4) },
       disabled: { opacity: 1 / 4 },
+      display: 'inline-block',
     },
     style: props => ({
       fontFamily: 'inherit',
       lineHeight: 16 / 14,
-      display: 'inline-block',
       verticalAlign: 'middle',
       textAlign: 'center',
       textDecoration: 'none',
@@ -456,13 +454,12 @@ const components = [
     type: 'div',
     props: {
       p: space[4],
-      display: 'flex',
-    },
-    style: props => ({
-      display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
+      display: 'flex',
+    },
+    style: props => ({
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundImage: props.backgroundImage

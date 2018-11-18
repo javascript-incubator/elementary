@@ -11,7 +11,6 @@ import styles, {
   transition,
   border,
   transform,
-  display,
 } from '@elementary/standard/lib/styles'
 
 import { oneOfType, number, string, func, object } from 'prop-types'
@@ -32,7 +31,6 @@ const withStyle = (style, props, extras = []) => Component => {
     transition,
     border,
     transform,
-    display,
     ...extras.map(x => styles[x]),
   )
 
