@@ -13,5 +13,4 @@ export const {
   states,
   transition,
   transform,
-  display,
 } = styles

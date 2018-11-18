@@ -69,9 +69,6 @@ const registry = {
   states: {
     pseudoStyles: [['active'], ['hover'], ['focus'], ['visited']],
   },
-  display: {
-    styles: [['display']],
-  },
   transition: {
     styles: [['transition']],
   },
