@@ -15,6 +15,10 @@ const components = [
       pb: space[2],
       color: 'white',
       bg: 'black',
+      hover: { boxShadow: `inset 0 0 0 999px ${darken(1 / 8)}` },
+      focus: { outline: 0 },
+      active: { borderStyle: 'inset', backgroundColor: darken(3 / 4) },
+      disabled: { opacity: 1 / 4 },
     },
     style: props => ({
       fontFamily: 'inherit',
@@ -25,19 +29,6 @@ const components = [
       textDecoration: 'none',
       border: 0,
       appearance: 'none',
-      '&:hover': {
-        boxShadow: `inset 0 0 0 999px ${darken(1 / 8)}`,
-      },
-      '&:focus': {
-        outline: 0,
-      },
-      '&:active': {
-        borderStyle: 'inset',
-        backgroundColor: darken(3 / 4),
-      },
-      '&:disabled': {
-        opacity: 1 / 4,
-      },
     }),
     extras: ['text'],
   },
@@ -47,24 +38,21 @@ const components = [
     props: {
       color: 'black',
       bg: 'transparent',
-    },
-    style: props => ({
       boxShadow: `inset 0 0 0 2px`,
-      '&:hover': {
+      hover: props => ({
         color: 'white',
         backgroundColor: props.color,
-      },
-      '&:focus': {
-        boxShadow: `inset 0 0 0 2px, 0 0 0 2px`,
-      },
-      '&:active': {
+      }),
+      focus: { boxShadow: `inset 0 0 0 2px, 0 0 0 2px` },
+      active: props => ({
         color: 'white',
         backgroundColor: props.color,
         boxShadow: `inset 0 0 0 2px ${props.color}, inset 0 0 8px ${darken(
           1 / 4,
         )}`,
-      },
-    }),
+      }),
+    },
+    style: {},
     extras: ['text'],
   },
   {
