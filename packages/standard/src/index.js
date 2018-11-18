@@ -1,3 +1,17 @@
 import styles from './styles'
 
-export const { color, borderRadius, space, border, boxShadow, flexContainer, flexBox, text, dimensions, states, transition, transform } = styles
+export const {
+  color,
+  borderRadius,
+  space,
+  border,
+  boxShadow,
+  flexContainer,
+  flexBox,
+  text,
+  dimensions,
+  states,
+  transition,
+  transform,
+  display,
+} = styles

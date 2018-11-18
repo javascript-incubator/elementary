@@ -1,6 +1,6 @@
 {
   "name": "@elementary/standard",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Props Standard for Elementary Components",
   "main": "lib/index.js",
   "files": [
