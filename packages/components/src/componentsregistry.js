@@ -456,20 +456,20 @@ const components = [
     type: 'div',
     props: {
       p: space[4],
+      display: 'flex',
     },
     style: props => ({
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      minHeight: '80vh',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundImage: props.backgroundImage
         ? `url(${props.backgroundImage})`
         : 'none',
     }),
-    extras: ['flexContainer'],
+    extras: ['flexContainer', 'flexBox'],
   },
   {
     name: 'Panel',

@@ -11,6 +11,7 @@ import {
   states,
   transition,
   transform,
+  display,
 } from '@elementary/standard'
 import styled from 'styled-components'
 import { createElement } from '@elementary/transformers'
@@ -33,6 +34,7 @@ export default compose(
       states,
       transition,
       transform,
+      display,
     ),
   removeProps,
   createElement,
