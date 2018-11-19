@@ -53,10 +53,6 @@ const components = [
   {
     name: 'ButtonCircle',
     type: 'Button',
-    props: {
-      pl: space[3],
-      pr: space[3],
-    },
     style: props => ({
       borderRadius: '99999px',
     }),
@@ -433,7 +429,6 @@ const components = [
       alignItems: 'center',
     }),
   },
-
   {
     name: 'Card',
     type: 'div',
