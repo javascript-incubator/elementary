@@ -16,7 +16,6 @@ const components = [
       hover: { boxShadow: `inset 0 0 0 999px ${darken(1 / 8)}` },
       focus: { outline: 0 },
       active: { borderStyle: 'inset', backgroundColor: darken(3 / 4) },
-      disabled: { opacity: 1 / 4 },
       display: 'inline-block',
     },
     style: props => ({
