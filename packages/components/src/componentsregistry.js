@@ -13,12 +13,9 @@ const components = [
       pr: space[3],
       pt: space[2],
       pb: space[2],
-      hover: { boxShadow: `inset 0 0 0 999px ${darken(1 / 8)}` },
-      focus: { outline: 0 },
-      active: { borderStyle: 'inset', backgroundColor: darken(3 / 4) },
-      display: 'inline-block',
     },
     style: props => ({
+      display: 'inline-block',
       fontFamily: 'inherit',
       lineHeight: 16 / 14,
       verticalAlign: 'middle',
