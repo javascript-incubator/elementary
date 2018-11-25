@@ -24,6 +24,7 @@ const propTypes = props.reduce((acc, x) => ({ ...acc, [x]: prop }), {})
 const withStyle = (style, props, extras = []) => Component => {
   const Base = styled(Component)(
     [],
+    style,
     space,
     dimensions,
     color,
@@ -39,7 +40,7 @@ const withStyle = (style, props, extras = []) => Component => {
   Base.propTypes = propTypes
 
   // Clean this up after styled-components removes whitelisting
-  const Comp = styled(Base).attrs(props)([], style)
+  const Comp = styled(Base).attrs(props)([])
   return Comp
 }
 
