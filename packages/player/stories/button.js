@@ -12,7 +12,6 @@ import {
   Banner,
 } from '@elementary/components'
 
-console.log(Button)
 storiesOf('ElementaryButton', module)
   .add('Just Button', () => <Button>Just Button</Button>)
   .add('Banner', () => (
