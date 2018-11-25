@@ -6,15 +6,8 @@ const components = [
   {
     name: 'Button',
     type: 'button',
-    props: {
-      f: fontSizes[0],
-      margin: space[0],
-      pl: space[3],
-      pr: space[3],
-      pt: space[2],
-      pb: space[2],
-    },
     style: props => ({
+      margin: '0px',
       display: 'inline-block',
       fontFamily: 'inherit',
       lineHeight: 16 / 14,
@@ -29,21 +22,10 @@ const components = [
   {
     name: 'ButtonOutline',
     type: 'Button',
-    props: {
-      bg: 'transparent',
+    style: props => ({
       boxShadow: `inset 0 0 0 2px`,
-      hover: props => ({
-        backgroundColor: props.color,
-      }),
-      focus: { boxShadow: `inset 0 0 0 2px, 0 0 0 2px` },
-      active: props => ({
-        backgroundColor: props.color,
-        boxShadow: `inset 0 0 0 2px ${props.color}, inset 0 0 8px ${darken(
-          1 / 4,
-        )}`,
-      }),
-    },
-    style: {},
+      backgroundColor: 'transparent',
+    }),
     extras: ['text'],
   },
   {
@@ -57,32 +39,18 @@ const components = [
   {
     name: 'ButtonTransparent',
     type: 'Button',
-    props: {
-      color: 'inherit',
-      bg: 'transparent',
-    },
     style: props => ({
-      '&:hover': {
-        color: props.color,
-        backgroundColor: 'transparent',
-      },
-      '&:focus': {
-        boxShadow: `inset 0 0 0 2px, 0 0 0 2px`,
-      },
-      '&:active': {
-        backgroundColor: 'transparent',
-        boxShadow: `inset 0 0 0 2px, inset 0 0 8px ${darken(1 / 4)}`,
-      },
+      color: 'inherit',
+      backgroundColor: 'transparent',
     }),
     extras: ['text'],
   },
   {
     name: 'Link',
     type: 'a',
-    props: {
+    style: {
       color: 'blue',
     },
-    style: {},
     extras: ['text'],
   },
   {
@@ -126,10 +94,9 @@ const components = [
   {
     name: 'Text',
     type: 'p',
-    props: {
+    style: {
       margin: space[0],
     },
-    style: {},
     extras: ['text'],
   },
   {
