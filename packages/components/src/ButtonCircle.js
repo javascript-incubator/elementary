@@ -2,11 +2,10 @@ import hoc from './styletransformer'
 import Button from './Button'
 
 export default hoc({
-  name: 'ButtonOutline',
+  name: 'ButtonCircle',
   type: 'Button',
   style: props => ({
-    boxShadow: `inset 0 0 0 2px`,
-    backgroundColor: 'transparent',
+    borderRadius: '99999px',
   }),
   extras: ['text'],
 })(Button)

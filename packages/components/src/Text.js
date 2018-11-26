@@ -1,11 +1,10 @@
 import hoc from './styletransformer'
-import { space } from './constants'
 
-export default hoc(
-  {
-    is: 'p',
-    margin: space[0],
+export default hoc({
+  name: 'Text',
+  type: 'p',
+  style: {
+    margin: '0px',
   },
-  {},
-  ['text'],
-)
+  extras: ['text'],
+})('p')

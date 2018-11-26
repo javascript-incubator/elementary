@@ -1,10 +1,10 @@
 import hoc from './styletransformer'
 
-export default hoc(
-  {
-    is: 'a',
+export default hoc({
+  name: 'Link',
+  type: 'a',
+  style: {
     color: 'blue',
   },
-  {},
-  ['text'],
-)
+  extras: ['text'],
+})('a')

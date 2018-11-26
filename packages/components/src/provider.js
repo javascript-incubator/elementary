@@ -9,14 +9,14 @@ import {
   string,
   number,
 } from 'prop-types'
-import theme from './constants'
+import { font } from './constants'
 
 const Base = styled.div([], props => ({
-  fontFamily: props.theme.font || theme.font,
+  fontFamily: props.theme.font || font,
 }))
 
 const Provider = props => (
-  <ThemeProvider theme={Object.assign({}, theme, props.theme)}>
+  <ThemeProvider theme={props.theme}>
     <Base {...props} />
   </ThemeProvider>
 )

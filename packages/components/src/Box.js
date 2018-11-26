@@ -1,8 +1,8 @@
 import hoc from './styletransformer'
 
 export default hoc({
-  name: 'Flex',
+  name: 'Box',
   type: 'div',
   extras: ['flexContainer', 'flexBox'],
-  style: { display: 'flex' },
+  style: { boxSizing: 'border-box' },
 })('div')

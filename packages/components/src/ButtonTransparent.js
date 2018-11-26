@@ -2,10 +2,10 @@ import hoc from './styletransformer'
 import Button from './Button'
 
 export default hoc({
-  name: 'ButtonOutline',
+  name: 'ButtonTransparent',
   type: 'Button',
   style: props => ({
-    boxShadow: `inset 0 0 0 2px`,
+    color: 'inherit',
     backgroundColor: 'transparent',
   }),
   extras: ['text'],

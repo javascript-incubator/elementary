@@ -1,12 +1,11 @@
 import hoc from './styletransformer'
 
-export default hoc(
-  {
-    z: 99,
-    is: 'div',
-  },
-  props => ({
+export default hoc({
+  name: 'Absolute',
+  type: 'div',
+  style: props => ({
+    zIndex: 99,
     position: 'absolute',
   }),
-  ['position'],
-)
+  extras: ['position'],
+})('div')

@@ -1,4 +1,4 @@
-import { compose } from '@elementary/core'
+import React from 'react'
 import styled from 'styled-components'
 import styles, {
   props as blacklist,
@@ -15,7 +15,43 @@ import styles, {
 } from '@elementary/standard/lib/styles'
 
 import { oneOfType, number, string, func, object } from 'prop-types'
-import { createElement, propHunter } from '@elementary/transformers'
+
+const createElement = type => {
+  const Base = props => {
+    const isEl = typeof type === 'string'
+    const Comp = isEl ? props.is || type : type
+    const next = { ...props }
+
+    if (isEl) delete next.is
+
+    return <Comp {...next} />
+  }
+
+  Base.displayName =
+    typeof type === 'string' ? `Created(${type})` : 'CreateElementWrapper'
+
+  Base.propTypes = {
+    is: string,
+  }
+
+  return Base
+}
+
+const propHunter = (blacklist = []) => Com => {
+  const clean = huntProps(blacklist)
+  const PropHunterElement = props => <Com {...clean(props)} />
+  PropHunterElement.displayName = 'PropHunterElement'
+  return PropHunterElement
+}
+
+const huntProps = blacklist => props => {
+  const next = {}
+  for (let key in props) {
+    if (blacklist.includes(key)) continue
+    next[key] = props[key]
+  }
+  return next
+}
 
 const prop = oneOfType([number, string, func, object])
 
@@ -44,12 +80,23 @@ const withStyle = (style, props, extras = []) => Component => {
   return Comp
 }
 
-export const removeProps = propHunter(blacklist)
+function compose(...funcs) {
+  if (funcs.length === 0) {
+    return arg => arg
+  }
 
-const hoc = (style, props, extras) =>
+  if (funcs.length === 1) {
+    return funcs[0]
+  }
+
+  return funcs.reduce((a, b) => (...args) => a(b(...args)))
+}
+// taken from recompose
+
+const hoc = ({ style, props, extras }) =>
   compose(
     withStyle(style, props, extras),
-    removeProps,
+    propHunter(blacklist),
     createElement,
   )
 

@@ -1,12 +1,10 @@
 import hoc from './styletransformer'
 
-export default hoc(
-  {
-    z: 99,
-    is: 'div',
-  },
-  props => ({
+export default hoc({
+  name: 'Relative',
+  type: 'div',
+  style: props => ({
+    zIndex: 99,
     position: 'relative',
   }),
-  ['position'],
-)
+})('div')

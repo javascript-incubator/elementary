@@ -1,13 +1,11 @@
 import hoc from './styletransformer'
 
-export default hoc(
-  {
-    z: 99,
-    is: 'div',
-  },
-  props => `
+export default hoc({
+  name: 'Sticky',
+  type: 'div',
+  style: props => `
       position: -webkit-sticky;
       position: sticky;
-  `,
-  ['position'],
-)
+      z-index: 99;
+    `,
+})('div')
