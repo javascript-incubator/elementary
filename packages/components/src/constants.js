@@ -21,3 +21,5 @@ export const colors = {
 
 export const font = `-apple-system, BlinkMacSystemFont, sans-serif`
 export const monospace = '"SF Mono", "Roboto Mono", Menlo, monospace'
+
+export default { breakpoints, colors, space, font, monospace }

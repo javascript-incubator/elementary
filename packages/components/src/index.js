@@ -12,7 +12,6 @@ export {
   font,
   monospace,
   fontSizes,
-  weights,
   colors,
 } from './constants'
 

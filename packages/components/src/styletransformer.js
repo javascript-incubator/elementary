@@ -1,4 +1,3 @@
-import { compose } from '@elementary/core'
 import styled from 'styled-components'
 import styles, {
   props as blacklist,
@@ -46,11 +45,10 @@ const withStyle = (style, props, extras = []) => Component => {
 
 export const removeProps = propHunter(blacklist)
 
-const hoc = (style, props, extras) =>
-  compose(
-    withStyle(style, props, extras),
-    removeProps,
-    createElement,
-  )
+const hoc = (style, props, extras) => Element =>
+  Element
+  |> createElement
+  |> propHunter(blacklist)
+  |> withStyle(style, props, extras)
 
 export default hoc

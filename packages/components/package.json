@@ -1,10 +1,10 @@
 {
   "name": "@elementary/components",
-  "version": "0.3.0-beta.7",
+  "version": "0.4.0",
   "description": "Components you can use ruthlessly in your everyday React Projects.",
   "main": "lib/index.js",
   "scripts": {
-    "build": "ENV=prod node build.js"
+    "build": "NODE_ENV=production node build.js"
   },
   "files": [
     "lib"
@@ -20,7 +20,8 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@elementary/charger": "^1.0.3",
+    "@lectro/core": "^1.1.2-alpha-21",
+    "@lectro/enhancer-buildutils": "^0.1.0-alpha-7",
     "lerna": "^2.5.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
