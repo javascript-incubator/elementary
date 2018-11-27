@@ -579,20 +579,16 @@ const components = [
   {
     name: 'Relative',
     type: 'div',
-    props: {
-      z: 99,
-    },
     style: props => ({
+      zIndex: 99,
       position: 'relative',
     }),
   },
   {
     name: 'Absolute',
     type: 'div',
-    props: {
-      z: 99,
-    },
     style: props => ({
+      zIndex: 99,
       position: 'absolute',
     }),
     extras: ['position'],
@@ -600,10 +596,8 @@ const components = [
   {
     name: 'Fixed',
     type: 'div',
-    props: {
-      z: 99,
-    },
     style: props => ({
+      zIndex: 99,
       position: 'fixed',
     }),
     extras: ['position'],
@@ -611,10 +605,8 @@ const components = [
   {
     name: 'Sticky',
     type: 'div',
-    props: {
-      z: 99,
-    },
     style: props => `
+      z-index: 99;
       position: -webkit-sticky;
       position: sticky;
     `,
@@ -648,7 +640,6 @@ const components = [
   {
     name: 'Row',
     type: 'Flex',
-    props: {},
     style: {
       flexDirection: 'row',
     },
@@ -656,7 +647,6 @@ const components = [
   {
     name: 'Column',
     type: 'Flex',
-    props: {},
     style: {
       flexDirection: 'column',
     },
