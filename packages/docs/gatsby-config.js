@@ -1,9 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Elementary',
   },
   plugins: [
     'gatsby-mdx',
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [`Nunito`],
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,

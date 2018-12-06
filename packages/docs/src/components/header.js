@@ -4,8 +4,7 @@ import { Link } from 'gatsby'
 const Header = _ => (
   <div
     style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
+      backgroundImage: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
     }}
   >
     <div
@@ -23,9 +22,16 @@ const Header = _ => (
             textDecoration: 'none',
           }}
         >
-          zzTab
+          Elementary
         </Link>
       </h1>
+      <p
+        style={{
+          marginTop: '10px',
+        }}
+      >
+        Components you can use ruthlessly in your everyday React Projects.
+      </p>
     </div>
   </div>
 )
