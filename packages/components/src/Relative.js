@@ -5,7 +5,6 @@ export default hoc({
   type: 'div',
   extras: ['position'],
   style: props => ({
-    zIndex: 99,
     position: 'relative',
   }),
 })('div')
