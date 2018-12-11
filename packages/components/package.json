@@ -1,6 +1,6 @@
 {
   "name": "@elementary/components",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Components you can use ruthlessly in your everyday React Projects.",
   "main": "lib/index.js",
   "scripts": {
