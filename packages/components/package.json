@@ -6,9 +6,7 @@
   "scripts": {
     "build": "rm -rf lib; NODE_ENV=production node build.js"
   },
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "keywords": [
     "react",
     "styled-components",
@@ -22,7 +20,6 @@
   "devDependencies": {
     "@lectro/core": "^1.1.2-alpha-21",
     "@lectro/enhancer-buildutils": "^0.1.0-alpha-7",
-    "lerna": "^2.5.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
   },

@@ -3,11 +3,9 @@
   "version": "0.1.4",
   "description": "Core Functions for Elementary Package",
   "main": "lib/main.js",
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "scripts": {
-    "build": "ENV=prod node build.js"
+    "build": "rm -rf lib; NODE_ENV=production node build.js"
   },
   "license": "MIT",
   "devDependencies": {

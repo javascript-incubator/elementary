@@ -3,17 +3,11 @@
   "version": "0.1.0",
   "description": "Pure Functional Error Handling",
   "main": "lib/main.js",
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "scripts": {
-    "build": "ENV=prod node build.js"
+    "build": "rm -rf lib; NODE_ENV=production node build.js"
   },
-  "keywords": [
-    "tryCatch",
-    "exceptions",
-    "fromNullable"
-  ],
+  "keywords": ["tryCatch", "exceptions", "fromNullable"],
   "author": "",
   "license": "MIT",
   "dependencies": {

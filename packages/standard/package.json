@@ -3,11 +3,9 @@
   "version": "0.1.5",
   "description": "Props Standard for Elementary Components",
   "main": "lib/index.js",
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "scripts": {
-    "build": "ENV=prod node build.js"
+    "build": "rm -rf lib; NODE_ENV=production node build.js"
   },
   "license": "MIT",
   "dependencies": {

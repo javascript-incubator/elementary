@@ -16,9 +16,7 @@
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -29,9 +27,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "devDependencies": {
-    "@lectro/core": "^1.1.2-alpha-21",
-    "@lectro/enhancer-buildutils": "^0.1.0-alpha-8"
   }
 }

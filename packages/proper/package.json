@@ -3,17 +3,11 @@
   "version": "0.2.2",
   "description": "Play with Object properties",
   "main": "lib/main.js",
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "scripts": {
-    "build": "ENV=prod node build.js"
+    "build": "rm -rf lib; NODE_ENV=production node build.js"
   },
-  "keywords": [
-    "functional",
-    "programming",
-    "properties"
-  ],
+  "keywords": ["functional", "programming", "properties"],
   "license": "MIT",
   "dependencies": {
     "@elementary/core": "^0.1.4"
