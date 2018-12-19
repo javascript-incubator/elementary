@@ -1,5 +1,5 @@
-module.exports = {
-  parser: 'babel-eslint',
-  plugins: ['prettier', 'react'],
-  extends: ['standard', 'standard-react', 'prettier'],
-}
+module.exports = require('@hellpack/eslint')({
+  rules: {
+    quotes: ['error', 'single'],
+  },
+});

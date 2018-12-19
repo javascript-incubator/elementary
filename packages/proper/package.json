@@ -19,6 +19,7 @@
     "@elementary/core": "^0.1.4"
   },
   "devDependencies": {
-    "@elementary/charger": "^1.0.3"
+    "@lectro/core": "^1.1.2-alpha-21",
+    "@lectro/enhancer-buildutils": "^0.1.0-alpha-8"
   }
 }
