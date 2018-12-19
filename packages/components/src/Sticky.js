@@ -1,4 +1,4 @@
-import hoc from './styletransformer'
+import hoc from './styletransformer';
 
 export default hoc({
   name: 'Sticky',
@@ -9,4 +9,4 @@ export default hoc({
       position: sticky;
       z-index: 99;
     `,
-})('div')
+})('div');

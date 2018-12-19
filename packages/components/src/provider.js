@@ -1,5 +1,5 @@
-import React from 'react'
-import styled, { ThemeProvider } from 'styled-components'
+import React from 'react';
+import styled, { ThemeProvider } from 'styled-components';
 import {
   shape,
   arrayOf,
@@ -8,18 +8,18 @@ import {
   object,
   string,
   number,
-} from 'prop-types'
-import { font } from './constants'
+} from 'prop-types';
+import { font } from './constants';
 
 const Base = styled.div([], props => ({
   fontFamily: props.theme.font || font,
-}))
+}));
 
 const Provider = props => (
   <ThemeProvider theme={props.theme}>
     <Base {...props} />
   </ThemeProvider>
-)
+);
 
 Provider.propTypes = {
   theme: shape({
@@ -31,6 +31,6 @@ Provider.propTypes = {
     font: string,
     monospace: string,
   }),
-}
+};
 
-export default Provider
+export default Provider;

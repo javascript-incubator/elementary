@@ -1,11 +1,11 @@
-import { Left, Right, identity } from '@elementary/core'
+import { Left, Right, identity } from '@elementary/core';
 
 const tryCatch = (f, g = identity) => {
   try {
-    return Right(f())
+    return Right(f());
   } catch (e) {
-    return Left(g(e))
+    return Left(g(e));
   }
-}
+};
 
-export default tryCatch
+export default tryCatch;

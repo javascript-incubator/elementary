@@ -1,4 +1,4 @@
-import styles from './styles'
+import styles from './styles';
 
 export const {
   color,
@@ -13,4 +13,4 @@ export const {
   states,
   transition,
   transform,
-} = styles
+} = styles;

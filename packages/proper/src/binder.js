@@ -1,15 +1,15 @@
-import { rcompose } from '@elementary/core'
+import { rcompose } from '@elementary/core';
 
-const binder = function (fns = []) {
-  function add (fn) {
-    return binder(fns.concat(fn))
+const binder = function(fns = []) {
+  function add(fn) {
+    return binder(fns.concat(fn));
   }
 
-  function invoke (args) {
-    return rcompose(...fns)(args)
+  function invoke(args) {
+    return rcompose(...fns)(args);
   }
 
-  return { add, invoke }
-}
+  return { add, invoke };
+};
 
-export default binder
+export default binder;

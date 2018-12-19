@@ -1,24 +1,25 @@
-import React from 'react'
-import { string } from 'prop-types'
+import React from 'react';
+import { string } from 'prop-types';
 
 const createElement = type => {
   const Base = props => {
-    const isEl = typeof type === 'string'
-    const Comp = isEl ? (props.is || type) : type
-    const next = { ...props }
+    const isEl = typeof type === 'string';
+    const Comp = isEl ? props.is || type : type;
+    const next = { ...props };
 
-    if (isEl) delete next.is
+    if (isEl) delete next.is;
 
-    return <Comp {...next} />
-  }
+    return <Comp {...next} />;
+  };
 
-  Base.displayName = typeof type === 'string' ? `Created(${type})` : 'CreateElementWrapper'
+  Base.displayName =
+    typeof type === 'string' ? `Created(${type})` : 'CreateElementWrapper';
 
   Base.propTypes = {
-    is: string
-  }
+    is: string,
+  };
 
-  return Base
-}
+  return Base;
+};
 
-export default createElement
+export default createElement;

@@ -1,4 +1,4 @@
-import hoc from './styletransformer'
+import hoc from './styletransformer';
 
 export default hoc({
   name: 'Link',
@@ -7,4 +7,4 @@ export default hoc({
     color: 'blue',
   },
   extras: ['text'],
-})('a')
+})('a');

@@ -1,4 +1,4 @@
-import hoc from './styletransformer'
+import hoc from './styletransformer';
 
 export default hoc({
   name: 'Banner',
@@ -15,4 +15,4 @@ export default hoc({
       : 'none',
   }),
   extras: ['flexContainer', 'flexBox'],
-})('div')
+})('div');

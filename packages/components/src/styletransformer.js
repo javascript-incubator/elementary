@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 import styles, {
   props as blacklist,
   space,
@@ -12,50 +12,50 @@ import styles, {
   border,
   transform,
   boxShadow,
-} from '@elementary/standard/lib/styles'
+} from '@elementary/standard/lib/styles';
 
-import { oneOfType, number, string, func, object } from 'prop-types'
+import { oneOfType, number, string, func, object } from 'prop-types';
 
 const createElement = type => {
   const Base = props => {
-    const isEl = typeof type === 'string'
-    const Comp = isEl ? props.is || type : type
-    const next = { ...props }
+    const isEl = typeof type === 'string';
+    const Comp = isEl ? props.is || type : type;
+    const next = { ...props };
 
-    if (isEl) delete next.is
+    if (isEl) delete next.is;
 
-    return <Comp {...next} />
-  }
+    return <Comp {...next} />;
+  };
 
   Base.displayName =
-    typeof type === 'string' ? `Created(${type})` : 'CreateElementWrapper'
+    typeof type === 'string' ? `Created(${type})` : 'CreateElementWrapper';
 
   Base.propTypes = {
     is: string,
-  }
+  };
 
-  return Base
-}
+  return Base;
+};
 
 const propHunter = (blacklist = []) => Com => {
-  const clean = huntProps(blacklist)
-  const PropHunterElement = props => <Com {...clean(props)} />
-  PropHunterElement.displayName = 'PropHunterElement'
-  return PropHunterElement
-}
+  const clean = huntProps(blacklist);
+  const PropHunterElement = props => <Com {...clean(props)} />;
+  PropHunterElement.displayName = 'PropHunterElement';
+  return PropHunterElement;
+};
 
 const huntProps = blacklist => props => {
-  const next = {}
+  const next = {};
   for (let key in props) {
-    if (blacklist.includes(key)) continue
-    next[key] = props[key]
+    if (blacklist.includes(key)) continue;
+    next[key] = props[key];
   }
-  return next
-}
+  return next;
+};
 
-const prop = oneOfType([number, string, func, object])
+const prop = oneOfType([number, string, func, object]);
 
-const propTypes = props.reduce((acc, x) => ({ ...acc, [x]: prop }), {})
+const propTypes = props.reduce((acc, x) => ({ ...acc, [x]: prop }), {});
 
 const withStyle = (style, props, extras = []) => Component => {
   const Base = styled(Component)(
@@ -71,25 +71,25 @@ const withStyle = (style, props, extras = []) => Component => {
     transform,
     boxShadow,
     ...extras.map(x => styles[x]),
-  )
+  );
 
-  Base.propTypes = propTypes
+  Base.propTypes = propTypes;
 
   // Clean this up after styled-components removes whitelisting
-  const Comp = styled(Base).attrs(props)([])
-  return Comp
-}
+  const Comp = styled(Base).attrs(props)([]);
+  return Comp;
+};
 
 function compose(...funcs) {
   if (funcs.length === 0) {
-    return arg => arg
+    return arg => arg;
   }
 
   if (funcs.length === 1) {
-    return funcs[0]
+    return funcs[0];
   }
 
-  return funcs.reduce((a, b) => (...args) => a(b(...args)))
+  return funcs.reduce((a, b) => (...args) => a(b(...args)));
 }
 // taken from recompose
 
@@ -98,6 +98,6 @@ const hoc = ({ style, props, extras }) =>
     withStyle(style, props, extras),
     propHunter(blacklist),
     createElement,
-  )
+  );
 
-export default hoc
+export default hoc;

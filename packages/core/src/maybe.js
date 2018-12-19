@@ -1,11 +1,14 @@
-function Maybe (x) {
-  const of = x => Maybe(x)
-  const isNothing = () => (x === null || x === undefined)
-  const map = f => Maybe(x).isNothing() ? Maybe(null) : Maybe(f(x))
-  const get = () => Maybe(x).isNothing() ? null : x
-  const join = () => Maybe(x).isNothing() ? Maybe(null) : x
-  const chain = f => Maybe(x).map(f).join()
-  return { of, map, isNothing, get, join, chain }
+function Maybe(x) {
+  const of = x => Maybe(x);
+  const isNothing = () => x === null || x === undefined;
+  const map = f => (Maybe(x).isNothing() ? Maybe(null) : Maybe(f(x)));
+  const get = () => (Maybe(x).isNothing() ? null : x);
+  const join = () => (Maybe(x).isNothing() ? Maybe(null) : x);
+  const chain = f =>
+    Maybe(x)
+      .map(f)
+      .join();
+  return { of, map, isNothing, get, join, chain };
 }
 
 // function Maybe (x) {
@@ -32,4 +35,4 @@ function Maybe (x) {
 //   return this.isNothing() ? Maybe.of(null) : this.__value
 // }
 
-export default Maybe
+export default Maybe;

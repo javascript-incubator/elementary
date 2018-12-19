@@ -1,4 +1,4 @@
-import hoc from './styletransformer'
+import hoc from './styletransformer';
 
 export default hoc({
   name: 'Relative',
@@ -7,4 +7,4 @@ export default hoc({
   style: props => ({
     position: 'relative',
   }),
-})('div')
+})('div');

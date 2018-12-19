@@ -1,1 +1,1 @@
-export default f => (...args) => f(...args.reverse())
+export default f => (...args) => f(...args.reverse());

@@ -1,4 +1,4 @@
-import hoc from './styletransformer'
+import hoc from './styletransformer';
 
 export default hoc({
   name: 'Fixed',
@@ -8,4 +8,4 @@ export default hoc({
     position: 'fixed',
   }),
   extras: ['position'],
-})('div')
+})('div');

@@ -1,5 +1,5 @@
-import hoc from './styletransformer'
-import { darken } from './utils'
+import hoc from './styletransformer';
+import { darken } from './utils';
 
 export default hoc({
   name: 'Overlay',
@@ -15,4 +15,4 @@ export default hoc({
     overflow: 'auto',
     boxShadow: `0 0 0 60vmax ${darken(1 / 2)}, 0 0 32px ${darken(1 / 4)}`,
   }),
-})('div')
+})('div');

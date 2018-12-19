@@ -1,5 +1,5 @@
-import hoc from './styletransformer'
-import Text from './Text'
+import hoc from './styletransformer';
+import Text from './Text';
 
 export default hoc({
   name: 'Truncate',
@@ -9,4 +9,4 @@ export default hoc({
     whiteSpace: 'nowrap',
     textOverflow: 'ellipsis',
   },
-})(Text)
+})(Text);

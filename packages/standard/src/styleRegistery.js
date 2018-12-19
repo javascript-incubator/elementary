@@ -1,6 +1,6 @@
-import { RegistryManager } from './utils'
-import spaceStyleGroupFrame from './space'
-import borderStylePropFrame from './border'
+import { RegistryManager } from './utils';
+import spaceStyleGroupFrame from './space';
+import borderStylePropFrame from './border';
 
 const registry = {
   color: {
@@ -75,6 +75,6 @@ const registry = {
   transform: {
     styles: [['transform']],
   },
-}
+};
 
-export default RegistryManager(registry)
+export default RegistryManager(registry);

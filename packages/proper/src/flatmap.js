@@ -1,5 +1,7 @@
-import { uncurry } from '@elementary/core'
+import { uncurry } from '@elementary/core';
 
-const flatMap = uncurry(transformer => arr => arr.reduce((acc, x) => [...acc, ...transformer(x)], []))
+const flatMap = uncurry(transformer => arr =>
+  arr.reduce((acc, x) => [...acc, ...transformer(x)], []),
+);
 
-export default flatMap
+export default flatMap;

@@ -1,5 +1,5 @@
-import hoc from './styletransformer'
-import Flex from './Flex'
+import hoc from './styletransformer';
+import Flex from './Flex';
 
 export default hoc({
   name: 'Column',
@@ -7,4 +7,4 @@ export default hoc({
   style: {
     flexDirection: 'column',
   },
-})(Flex)
+})(Flex);

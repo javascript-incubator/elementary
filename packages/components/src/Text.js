@@ -1,4 +1,4 @@
-import hoc from './styletransformer'
+import hoc from './styletransformer';
 
 export default hoc({
   name: 'Text',
@@ -7,4 +7,4 @@ export default hoc({
     margin: '0px',
   },
   extras: ['text'],
-})('p')
+})('p');

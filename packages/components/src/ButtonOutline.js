@@ -1,5 +1,5 @@
-import hoc from './styletransformer'
-import Button from './Button'
+import hoc from './styletransformer';
+import Button from './Button';
 
 export default hoc({
   name: 'ButtonOutline',
@@ -9,4 +9,4 @@ export default hoc({
     backgroundColor: 'transparent',
   }),
   extras: ['text'],
-})(Button)
+})(Button);

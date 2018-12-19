@@ -1,4 +1,4 @@
-import hoc from './styletransformer'
+import hoc from './styletransformer';
 
 export default hoc({
   name: 'Button',
@@ -15,4 +15,4 @@ export default hoc({
     appearance: 'none',
   }),
   extras: ['text'],
-})('button')
+})('button');

@@ -1,4 +1,4 @@
-import hoc from './styletransformer'
+import hoc from './styletransformer';
 
 export default hoc({
   name: 'Image',
@@ -8,4 +8,4 @@ export default hoc({
     maxWidth: '100%',
     height: 'auto',
   },
-})('img')
+})('img');

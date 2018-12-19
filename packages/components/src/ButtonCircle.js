@@ -1,5 +1,5 @@
-import hoc from './styletransformer'
-import Button from './Button'
+import hoc from './styletransformer';
+import Button from './Button';
 
 export default hoc({
   name: 'ButtonCircle',
@@ -8,4 +8,4 @@ export default hoc({
     borderRadius: '99999px',
   }),
   extras: ['text'],
-})(Button)
+})(Button);
