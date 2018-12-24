@@ -17,7 +17,7 @@ export function last(array: Array<T>): T;
 export function concat(semi: Array<any>|Object, semi: Array<any>|Object): Array<any> | Object;
 
 export interface Maybe{
-    map(transformer: Function, maybe: Maybe): Maybe
+    map(transformer: Function): Maybe
     get(): any
 }
 
