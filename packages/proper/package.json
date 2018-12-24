@@ -1,6 +1,6 @@
 {
   "name": "@elementary/proper",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Play with Object properties",
   "main": "lib/main.js",
   "files": ["lib", "index.d.ts"],
