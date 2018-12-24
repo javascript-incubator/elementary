@@ -1,53 +1,24 @@
-declare module "@elementary/proper" {
-    function map(
-         transformer: Function,
-         array: Array
-     ): Array;
-     export = map;
+export function pick(keys: Array<string>, pickee: object): object;
 
-     function filter(
-        predicate: Function,
-        array: Array
-    ): Array;
-    export = filter;
+export function access(query: string, accessee: object): any;
 
-    function pick(
-        array: Array<string>,
-        object: Object
-    ): Object;
-    export = pick;
+export function filter(predicate: Function, host: Array<any> | Object): Array<any> | Object;
 
-    function omit(
-        array: Array<string>,
-        object: Object
-    ): Object;
-    export = omit;
+export function map(transformer: Function, host: Array<any> | Object): Array<any> | Object;
 
-    function first(
-        array: Array<T>,
-    ): T;
-    export = first;
+export function omit(keys: Array<string>, omitee: object): object;
 
-    function last(
-        array: Array<T>,
-    ): T;
-    export = last;
+export function range(start: number, end: number): Array<number>;
 
-    function range(
-        start: number,
-        end: number
-    ): Array<number>;
-    export = range;
+export function first(array: Array<T>): T;
 
-    function concat(
-        semi: Object,
-        semi: Object
-    ): Object;
-    export = concat;
+export function last(array: Array<T>): T;
 
-    function access(
-        query: string,
-        object: Object
-    ): any;
-    export = access;
- }
+export function concat(semi: Array<any>|Object, semi: Array<any>|Object): Array<any> | Object;
+
+export interface Maybe{
+    map(transformer: Function, maybe: Maybe): Maybe
+    get(): any
+}
+
+export function accessRaw(query: string, object: object): Maybe;
