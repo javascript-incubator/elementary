@@ -3,7 +3,8 @@
   "version": "0.2.2",
   "description": "Play with Object properties",
   "main": "lib/main.js",
-  "files": ["lib"],
+  "files": ["lib", "index.d.ts"],
+  "types": "index.d.ts",
   "scripts": {
     "build": "rm -rf lib; NODE_ENV=production node build.js"
   },
