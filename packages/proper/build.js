@@ -10,7 +10,7 @@ new Lectro()
       (self.output = {
         library: '@elementary/proper',
         path: path.resolve(__dirname, './', 'lib'),
-        filename: 'index.js',
+        filename: 'main.js',
         libraryTarget: 'commonjs2',
       }),
   )
