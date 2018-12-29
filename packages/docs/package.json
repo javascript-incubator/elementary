@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@elementary/components": "^0.5.2",
     "@mdx-js/mdx": "^0.16.5",
     "@mdx-js/tag": "^0.16.1",
     "gatsby": "^2.0.0",
@@ -16,11 +17,13 @@
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "start": "gatsby develop",
     "format": "prettier --write '**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

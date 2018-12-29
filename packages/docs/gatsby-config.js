@@ -7,7 +7,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: [`Nunito`],
+        fonts: [`Ubuntu Mono`],
       },
     },
     'gatsby-plugin-react-helmet',
