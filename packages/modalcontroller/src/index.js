@@ -16,9 +16,7 @@ export const withModalControllerProvider = C => class ModalController extends Co
     render() {
         const ModalComponent = this.state.modal;
         return <ModalContext.Provider value={this.state}>
-            <PoseGroup>
-                {ModalComponent && <ModalComponent closeModal={_ => this.closeModal()} />}
-            </PoseGroup>
+            {ModalComponent && <ModalComponent closeModal={_ => this.closeModal()} />}
             <C {...this.props} />
         </ModalContext.Provider>
     }
