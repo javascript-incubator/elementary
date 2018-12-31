@@ -3,7 +3,7 @@ import hoc from './styletransformer';
 export default hoc({
   name: 'Absolute',
   type: 'div',
-  style: props => ({
+  style: _props => ({
     zIndex: 99,
     position: 'absolute',
   }),
