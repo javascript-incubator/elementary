@@ -1,6 +1,8 @@
-# Elementary Components 🦅
+# Elementary Components
 
 _Components you can use ruthlessly in your everyday React Projects._
+
+[Read Docs](https://rajatsharma.github.io/elementary-docs/)
 
 ## Getting Started
 
@@ -19,7 +21,7 @@ const Social = () => <Row>
   <Button color='white' bg='blue'>Facebook</Button>
   <Button color='white' bg='red'>Pinterest</Button>
   <Button color='white' bg='green'>Medium</Button>
-  </Row>
+</Row>
 
 const AwesomeText = () => <Text letterSpacing='2px' f='18px' tt='uppercase'>Awesome</Text>
 

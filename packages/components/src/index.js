@@ -19,3 +19,4 @@ export { default as Row } from './Row';
 export { default as Sticky } from './Sticky';
 export { default as Text } from './Text';
 export { default as Truncate } from './Truncate';
+export { default as Grid } from './Grid';

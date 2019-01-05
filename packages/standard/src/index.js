@@ -1,5 +1,10 @@
 import styles from './styles';
 
+export default styles;
+
+export { props } from './styles';
+export { propsWithCategory } from './styles';
+
 export const {
   color,
   borderRadius,
@@ -13,4 +18,6 @@ export const {
   states,
   transition,
   transform,
+  gridContainer,
+  gridItem,
 } = styles;

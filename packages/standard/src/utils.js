@@ -29,7 +29,16 @@ export const RegistryManager = registry => {
     ).reduce(concatenator, []);
   }
 
-  return { map, inspect, getRegistry, toPropArray };
+  function toPropArrayWithCategory() {
+    const concatenator = (acc, x) => acc.concat(x);
+    return RegistryManager(registry)
+      .map(x => {
+        return (x.styles || x.pseudoStyles).reduce(concatenator, []);
+      })
+      .getRegistry();
+  }
+
+  return { map, inspect, getRegistry, toPropArray, toPropArrayWithCategory };
 };
 
 // Monoid StyleGroup => Object -> StyleGroup

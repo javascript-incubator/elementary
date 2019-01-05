@@ -8,6 +8,11 @@
   "scripts": {
     "build": "rm -rf lib; NODE_ENV=production node build.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rajatsharma/elementary"
+  },
+  "homepage": "https://rajatsharma.github.io/elementary-docs/",
   "keywords": ["functional", "programming", "properties"],
   "license": "MIT",
   "dependencies": {

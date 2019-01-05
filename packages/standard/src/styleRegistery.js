@@ -75,6 +75,38 @@ const registry = {
   transform: {
     styles: [['transform']],
   },
+  gridItem: {
+    styles: [
+      ['gridColumnStart'],
+      ['gridColumnEnd'],
+      ['gridRowStart'],
+      ['gridRowEnd'],
+      ['gridColumn'],
+      ['gridRow'],
+      ['gridArea'],
+      ['justifySelf'],
+      ['alignSelf'],
+      ['placeSelf'],
+    ],
+  },
+  gridContainer: {
+    styles: [
+      ['gridTemplate'],
+      ['gridTemplateRows'],
+      ['gridTemplateColumns'],
+      ['gridTemplateAreas'],
+      ['gridTemplate'],
+      ['gridColumnGap'],
+      ['gridRowGap'],
+      ['gridGap'],
+      ['justifyItems'],
+      ['alignItems'],
+      ['placeItems'],
+      ['justifyContent'],
+      ['alignContent'],
+      ['placeContent'],
+    ],
+  },
 };
 
 export default RegistryManager(registry);

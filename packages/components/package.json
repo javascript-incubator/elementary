@@ -3,6 +3,11 @@
   "version": "0.5.2",
   "description": "Components you can use ruthlessly in your everyday React Projects.",
   "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rajatsharma/elementary"
+  },
+  "homepage": "https://rajatsharma.github.io/elementary-docs/",
   "scripts": {
     "build": "rm -rf lib; NODE_ENV=production node build.js"
   },

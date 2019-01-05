@@ -12,7 +12,7 @@ import styles, {
   border,
   transform,
   boxShadow,
-} from '@elementary/standard/lib/styles';
+} from '@elementary/standard';
 
 import { oneOfType, number, string, func, object } from 'prop-types';
 
