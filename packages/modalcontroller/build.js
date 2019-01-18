@@ -1,9 +1,11 @@
-const Lectro = require('@lectro/core')
-const BuildUtils = require('@lectro/enhancer-buildutils')
-const path = require('path')
+const Lectro = require('@lectro/core');
+const BuildUtils = require('@lectro/enhancer-buildutils');
+const CommonUtils = require('@lectro/enhancer-commonutils');
+const path = require('path');
 
 new Lectro()
   .use(BuildUtils)
+  .use(CommonUtils)
   .setEntry(path.resolve(__dirname, './', 'src', 'index.js'))
   .tap(
     self =>
@@ -15,4 +17,4 @@ new Lectro()
       }),
   )
   .devtool('none')
-  .build()
+  .build();
