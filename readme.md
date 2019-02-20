@@ -1,5 +1,7 @@
 ## Elementary
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/rajatsharma/elementary.svg)](https://greenkeeper.io/)
+
 _Ultracommon React Components powered by Functional Lenses_
 
 [Read Docs](https://rajatsharma.github.io/elementary-docs/)
