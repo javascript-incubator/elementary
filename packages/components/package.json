@@ -31,6 +31,6 @@
   "dependencies": {
     "@elementary/standard": "0.1.6",
     "prop-types": "^15.6.0",
-    "styled-components": "4.1.1"
+    "styled-components": "4.1.3"
   }
 }
