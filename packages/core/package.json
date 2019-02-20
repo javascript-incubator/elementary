@@ -1,6 +1,6 @@
 {
   "name": "@elementary/core",
-  "version": "0.1.4",
+  "version": "0.1.4-alpha.1",
   "description": "Core Functions for Elementary Package",
   "main": "build/main.js",
   "files": ["build"],

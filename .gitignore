@@ -6,3 +6,6 @@ node_modules
 lerna-debug.log
 *.log
 .cache
+build
+.psci-modules
+.psc-package
