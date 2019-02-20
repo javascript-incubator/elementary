@@ -2,14 +2,14 @@
   "name": "@elementary/core",
   "version": "0.1.4",
   "description": "Core Functions for Elementary Package",
-  "main": "lib/main.js",
-  "files": ["lib"],
+  "main": "build/main.js",
+  "files": ["build"],
   "scripts": {
-    "build": "rm -rf lib; NODE_ENV=production node build.js"
+    "build": "rm -rf lib; NODE_ENV=production node build.js",
+    "dev": "node dev.js"
   },
   "license": "MIT",
   "devDependencies": {
-    "@lectro/core": "^1.1.2-alpha-21",
-    "@lectro/enhancer-buildutils": "^0.1.0-alpha-8"
+    "@enginite/libstarter": "1.0.0-alpha.10"
   }
 }

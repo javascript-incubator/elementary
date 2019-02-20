@@ -1,5 +1,5 @@
 function Maybe(x) {
-  const of = x => Maybe(x);
+  const of = y => Maybe(y);
   const isNothing = () => x === null || x === undefined;
   const map = f => (Maybe(x).isNothing() ? Maybe(null) : Maybe(f(x)));
   const get = () => (Maybe(x).isNothing() ? null : x);
