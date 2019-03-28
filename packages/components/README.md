@@ -1,6 +1,7 @@
 # Elementary Components
 
 _Components you can use ruthlessly in your everyday React Projects._
+[![install size](https://packagephobia.now.sh/badge?p=@elementary/components@0.5.4)](https://packagephobia.now.sh/result?p=@elementary/components@0.5.4)
 
 [Read Docs](https://rajatsharma.github.io/elementary-docs/)
 
