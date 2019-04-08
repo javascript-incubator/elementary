@@ -2,16 +2,18 @@
   "name": "@elementary/components",
   "version": "0.5.4",
   "description": "Components you can use ruthlessly in your everyday React Projects.",
-  "main": "lib/index.js",
+  "main": "build/main.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/rajatsharma/elementary"
   },
   "homepage": "https://rajatsharma.github.io/elementary-docs/",
   "scripts": {
-    "build": "rm -rf lib; NODE_ENV=production node build.js"
+    "build": "en-libstarter build"
   },
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "keywords": [
     "react",
     "styled-components",
@@ -22,17 +24,16 @@
     "cssinjs"
   ],
   "license": "MIT",
-  "peerDependencies": {
-    "styled-components": "^4.1.1"    
-  },
   "devDependencies": {
-    "@lectro/core": "^1.1.2-alpha-21",
-    "@lectro/enhancer-buildutils": "^0.1.0-alpha-7",
+    "@enginite/libstarter": "^1.0.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
   },
   "dependencies": {
     "@elementary/standard": "0.1.6",
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.10",
+    "emotion-theming": "^10.0.10",
     "prop-types": "^15.6.0"
   }
 }

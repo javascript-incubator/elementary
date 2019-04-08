@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import styles, {
   props as blacklist,
   space,
@@ -76,7 +76,7 @@ const withStyle = (style, props, extras = []) => Component => {
   Base.propTypes = propTypes;
 
   // Clean this up after styled-components removes whitelisting
-  const Comp = styled(Base).attrs(props)([]);
+  const Comp = styled(Base)();
   return Comp;
 };
 

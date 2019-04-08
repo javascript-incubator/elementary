@@ -1,5 +1,5 @@
 export { default as Provider } from './provider';
-export { ServerStyleSheet, styled } from 'styled-components';
+// export { ServerStyleSheet, styled } from 'styled-components';
 
 export { default as Button } from './Button';
 export { default as ButtonOutline } from './ButtonOutline';
