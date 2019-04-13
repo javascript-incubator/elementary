@@ -2,10 +2,12 @@
   "name": "@elementary/standard",
   "version": "0.1.6",
   "description": "Props Standard for Elementary Components",
-  "main": "lib/index.js",
-  "files": ["lib"],
+  "main": "build/index.js",
+  "files": [
+    "build"
+  ],
   "scripts": {
-    "build": "rm -rf lib; NODE_ENV=production node build.js"
+    "build": "en-libstarter build"
   },
   "repository": {
     "type": "git",
@@ -17,8 +19,7 @@
     "prop-types": "^15.6.0"
   },
   "devDependencies": {
-    "@lectro/core": "^1.1.2-alpha-21",
-    "@lectro/enhancer-buildutils": "^0.1.0-alpha-8",
+    "@enginite/libstarter": "^1.0.2",
     "react": "^16.2.0"
   }
 }

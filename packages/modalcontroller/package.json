@@ -7,13 +7,12 @@
     "lib"
   ],
   "scripts": {
-    "build": "rm -rf lib; NODE_ENV=production node build.js"
+    "build": "en-libstarter build"
   },
   "author": "Rajat Sharma",
   "license": "MIT",
   "devDependencies": {
-    "@lectro/core": "^1.1.2-alpha-21",
-    "@lectro/enhancer-buildutils": "^0.1.0-alpha-7",
+    "@enginite/libstarter": "^1.0.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
   },

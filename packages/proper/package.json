@@ -2,24 +2,30 @@
   "name": "@elementary/proper",
   "version": "0.2.5",
   "description": "Play with Object properties",
-  "main": "lib/main.js",
-  "files": ["lib", "index.d.ts"],
+  "main": "build/main.js",
+  "files": [
+    "build",
+    "index.d.ts"
+  ],
   "types": "index.d.ts",
   "scripts": {
-    "build": "rm -rf lib; NODE_ENV=production node build.js"
+    "build": "en-libstarter build"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/rajatsharma/elementary"
   },
   "homepage": "https://rajatsharma.github.io/elementary-docs/",
-  "keywords": ["functional", "programming", "properties"],
+  "keywords": [
+    "functional",
+    "programming",
+    "properties"
+  ],
   "license": "MIT",
   "dependencies": {
     "@elementary/core": "^0.1.4"
   },
   "devDependencies": {
-    "@lectro/core": "^1.1.2-alpha-21",
-    "@lectro/enhancer-buildutils": "^0.1.0-alpha-8"
+    "@enginite/libstarter": "^1.0.2"
   }
 }
