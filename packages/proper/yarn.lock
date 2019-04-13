@@ -739,6 +739,11 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@elementary/core@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.npmjs.org/@elementary/core/-/core-0.1.4.tgz#6457ed6c2f54da21e557b1c038b9a8803b399b33"
+  integrity sha512-j5w90W3JlM0ZXgmxmks+zH7eRKWaZM++okFfA6ReaJQGxVrGU3PWgNit9BBHI5Z8zrs4JzqYrc8CmL1HkP4Biw==
+
 "@lectro/babel-preset-lectro@1.1.2-beta-1":
   version "1.1.2-beta-1"
   resolved "https://registry.yarnpkg.com/@lectro/babel-preset-lectro/-/babel-preset-lectro-1.1.2-beta-1.tgz#221b4aac7d36b2176493cca9fa4cdb20e00beed5"

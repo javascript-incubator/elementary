@@ -807,13 +807,6 @@
   dependencies:
     webpackbar "^2.6.1"
 
-"@lectro/enhancer-commonutils@^1.1.2-alpha-13":
-  version "1.1.2-alpha-13"
-  resolved "https://registry.npmjs.org/@lectro/enhancer-commonutils/-/enhancer-commonutils-1.1.2-alpha-13.tgz#8b562e9cdeeb02ce767ec06e62af843a771bb234"
-  integrity sha512-p0kwskxolQQPmbSybmiXed3rp9tK53mra4vargoKCnJe44U5/UFEzpi6DTjGoWPwaoqmCCWTK6fT2QcWhsb30g==
-  dependencies:
-    node-fetch "2.1.1"
-
 "@popmotion/easing@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@popmotion/easing/-/easing-1.0.1.tgz#48336aea29542113df10aeb81b4fd10f0b95f937"
@@ -4049,11 +4042,6 @@ no-case@^2.2.0:
   integrity sha512-rmTZ9kz+f3rCvK2TD1Ue/oZlns7OGoIWP4fc3llxxRXlOkHKoWPPWJOfFYpITabSow43QJbRIoHQXtt10VldyQ==
   dependencies:
     lower-case "^1.1.1"
-
-node-fetch@2.1.1:
-  version "2.1.1"
-  resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-2.1.1.tgz#369ca70b82f50c86496104a6c776d274f4e4a2d4"
-  integrity sha1-NpynC4L1DIZJYQSmx3bSdPTkotQ=
 
 node-gyp@^3.8.0:
   version "3.8.0"
