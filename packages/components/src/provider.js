@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { themeTransformer } from '@elementary/standard';
-
 import { ThemeProvider } from 'emotion-theming';
 import {
   shape,
