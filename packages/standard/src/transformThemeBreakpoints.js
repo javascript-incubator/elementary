@@ -12,6 +12,6 @@ const ResponsiveDesignFactory = function(breakpoints = []) {
 };
 
 export default theme => ({
-  breakpoints: ResponsiveDesignFactory(theme.breakpoints),
   ...theme,
+  breakpoints: ResponsiveDesignFactory(theme.breakpoints),
 });
