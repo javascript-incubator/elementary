@@ -1,6 +1,6 @@
 {
   "name": "@elementary/modalcontroller",
-  "version": "0.6.1-alpha.2",
+  "version": "0.6.1-alpha.3",
   "description": "Take control of your Modals with React",
   "main": "build/main.js",
   "files": [
