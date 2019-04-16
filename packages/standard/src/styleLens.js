@@ -8,6 +8,21 @@ const styleLens = (prop, cssProperty) => props => {
   ) {
     return StyleGroup().empty();
   }
+
+  if (
+    (typeof (props[prop] || props[cssProperty]) === 'function'
+      ? (props[prop] || props[cssProperty])(props)
+      : props[prop] || props[cssProperty]
+    ).responsive
+  ) {
+    return StyleGroup(
+      (typeof (props[prop] || props[cssProperty]) === 'function'
+        ? (props[prop] || props[cssProperty])(props)
+        : props[prop] || props[cssProperty]
+      ).responsive(cssProperty),
+    );
+  }
+
   return StyleGroup({
     [cssProperty || prop]:
       typeof (props[prop] || props[cssProperty]) === 'function'

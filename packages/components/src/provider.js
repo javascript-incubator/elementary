@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { themeTransformer } from '@elementary/standard';
+
 import { ThemeProvider } from 'emotion-theming';
 import {
   shape,
@@ -16,8 +18,8 @@ const Base = styled.div([], props => ({
   fontFamily: props.theme.font || font,
 }));
 
-const Provider = props => (
-  <ThemeProvider theme={props.theme}>
+const Provider = ({ theme, ...props }) => (
+  <ThemeProvider theme={themeTransformer(theme)}>
     <Base {...props} />
   </ThemeProvider>
 );
@@ -32,6 +34,12 @@ Provider.propTypes = {
     font: string,
     monospace: string,
   }),
+};
+
+Provider.defaultProps = {
+  theme: {
+    breakpoints: [],
+  },
 };
 
 export default Provider;

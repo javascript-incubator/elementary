@@ -2,6 +2,7 @@ import styles from './styles';
 
 export default styles;
 
+export { default as themeTransformer } from './transformThemeBreakpoints';
 export { props } from './styles';
 export { propsWithCategory } from './styles';
 
