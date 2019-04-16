@@ -9,6 +9,7 @@
   ],
   "types": "index.d.ts",
   "scripts": {
+    "prepublishOnly": "en-libstarter build",
     "build": "en-libstarter build"
   },
   "repository": {

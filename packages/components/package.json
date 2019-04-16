@@ -9,6 +9,7 @@
   },
   "homepage": "https://rajatsharma.github.io/elementary-docs/",
   "scripts": {
+    "prepublishOnly": "en-libstarter build",
     "build": "en-libstarter build"
   },
   "files": [

@@ -7,6 +7,7 @@
     "build"
   ],
   "scripts": {
+    "prepublishOnly": "en-libstarter build",
     "build": "en-libstarter build"
   },
   "repository": {
