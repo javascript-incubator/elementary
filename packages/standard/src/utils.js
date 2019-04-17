@@ -1,3 +1,5 @@
+import deepmerge from 'deepmerge';
+
 export const merge = (x, y) => ({ ...x, ...y });
 
 // Functor RegistryManager => Object -> RegistryManager
@@ -44,7 +46,7 @@ export const RegistryManager = registry => {
 // Monoid StyleGroup => Object -> StyleGroup
 export const StyleGroup = (style = {}) => {
   function concat(newStyle) {
-    return StyleGroup({ ...style, ...newStyle.getStyle() });
+    return StyleGroup(deepmerge(style, newStyle.getStyle()));
   }
 
   function inspect() {

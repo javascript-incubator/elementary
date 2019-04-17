@@ -15,7 +15,7 @@ const styleLens = (prop, cssProperty) => props => {
       : props[prop] || props[cssProperty];
 
   if (evaluatedValue === undefined || evaluatedValue === null) {
-    return StyleGroup.empty();
+    return StyleGroup().empty();
   }
 
   if (evaluatedValue.responsive) {
