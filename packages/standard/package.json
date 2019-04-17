@@ -1,6 +1,6 @@
 {
   "name": "@elementary/standard",
-  "version": "0.6.1-alpha.4",
+  "version": "0.6.1-alpha.5",
   "description": "Props Standard for Elementary Components",
   "main": "build/main.js",
   "files": [
