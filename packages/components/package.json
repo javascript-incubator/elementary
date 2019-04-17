@@ -1,6 +1,6 @@
 {
   "name": "@elementary/components",
-  "version": "0.6.1-alpha.5",
+  "version": "0.6.1-alpha.6",
   "description": "Components you can use ruthlessly in your everyday React Projects.",
   "main": "build/main.js",
   "repository": {
@@ -31,7 +31,7 @@
     "react-dom": "^16.6.3"
   },
   "dependencies": {
-    "@elementary/standard": "^0.6.1-alpha.5",
+    "@elementary/standard": "^0.6.1-alpha.6",
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.10",
     "emotion-theming": "^10.0.10",
