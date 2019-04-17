@@ -3,7 +3,7 @@ import hoc from './styletransformer';
 export default hoc({
   name: 'Button',
   type: 'button',
-  style: props => ({
+  style: _props => ({
     margin: '0px',
     display: 'inline-block',
     fontFamily: 'inherit',

@@ -17,40 +17,25 @@ import styles, {
 import { oneOfType, number, string, func, object } from 'prop-types';
 
 const createElement = type => {
+  const isEl = typeof type === 'string';
+
   const Base = props => {
-    const isEl = typeof type === 'string';
     const Comp = isEl ? props.is || type : type;
-    const next = { ...props };
-
-    if (isEl) delete next.is;
-
-    return <Comp {...next} />;
+    return <Comp {...props} />;
   };
 
-  Base.displayName =
-    typeof type === 'string' ? `Created(${type})` : 'CreateElementWrapper';
+  Base.displayName = `Created(${
+    typeof type === 'string' ? type : type.displayName || 'CreatedElement'
+  })`;
 
   Base.propTypes = {
     is: string,
   };
 
-  return Base;
-};
-
-const propHunter = (blacklist = []) => Com => {
-  const clean = huntProps(blacklist);
-  const PropHunterElement = props => <Com {...clean(props)} />;
-  PropHunterElement.displayName = 'PropHunterElement';
-  return PropHunterElement;
-};
-
-const huntProps = blacklist => props => {
-  const next = {};
-  for (let key in props) {
-    if (blacklist.includes(key)) continue;
-    next[key] = props[key];
-  }
-  return next;
+  return styled(Base, {
+    shouldForwardProp: prop =>
+      isEl ? !blacklist.concat('is').includes(prop) : true,
+  })();
 };
 
 const prop = oneOfType([number, string, func, object]);
@@ -76,8 +61,7 @@ const withStyle = (style, props, extras = []) => Component => {
   Base.propTypes = propTypes;
 
   // Clean this up after styled-components removes whitelisting
-  const Comp = styled(Base)();
-  return Comp;
+  return Base;
 };
 
 function compose(...funcs) {
@@ -96,7 +80,6 @@ function compose(...funcs) {
 const hoc = ({ style, props, extras }) =>
   compose(
     withStyle(style, props, extras),
-    propHunter(blacklist),
     createElement,
   );
 

@@ -8,25 +8,22 @@ const styleLens = (prop, cssProperty) => props => {
   ) {
     return StyleGroup().empty();
   }
-  if (
-    (typeof (props[prop] || props[cssProperty]) === 'function'
+
+  const evaluatedValue =
+    typeof (props[prop] || props[cssProperty]) === 'function'
       ? (props[prop] || props[cssProperty])(props)
-      : props[prop] || props[cssProperty]
-    ).responsive
-  ) {
-    return StyleGroup(
-      (typeof (props[prop] || props[cssProperty]) === 'function'
-        ? (props[prop] || props[cssProperty])(props)
-        : props[prop] || props[cssProperty]
-      ).responsive(cssProperty || prop),
-    );
+      : props[prop] || props[cssProperty];
+
+  if (evaluatedValue === undefined || evaluatedValue === null) {
+    return StyleGroup.empty();
+  }
+
+  if (evaluatedValue.responsive) {
+    return StyleGroup(evaluatedValue.responsive(cssProperty || prop));
   }
 
   return StyleGroup({
-    [cssProperty || prop]:
-      typeof (props[prop] || props[cssProperty]) === 'function'
-        ? (props[prop] || props[cssProperty])(props)
-        : props[prop] || props[cssProperty],
+    [cssProperty || prop]: evaluatedValue,
   });
 };
 
