@@ -24,9 +24,7 @@ export const RegistryManager = registry => {
     const concatenator = (acc, x) => acc.concat(x);
     return Object.values(
       RegistryManager(registry)
-        .map(x => {
-          return (x.styles || x.pseudoStyles).reduce(concatenator, []);
-        })
+        .map(x => (x.styles || x.pseudoStyles).reduce(concatenator, []))
         .getRegistry(),
     ).reduce(concatenator, []);
   }
