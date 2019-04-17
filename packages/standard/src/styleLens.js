@@ -8,7 +8,6 @@ const styleLens = (prop, cssProperty) => props => {
   ) {
     return StyleGroup().empty();
   }
-
   if (
     (typeof (props[prop] || props[cssProperty]) === 'function'
       ? (props[prop] || props[cssProperty])(props)
@@ -19,7 +18,7 @@ const styleLens = (prop, cssProperty) => props => {
       (typeof (props[prop] || props[cssProperty]) === 'function'
         ? (props[prop] || props[cssProperty])(props)
         : props[prop] || props[cssProperty]
-      ).responsive(cssProperty),
+      ).responsive(cssProperty || prop),
     );
   }
 
