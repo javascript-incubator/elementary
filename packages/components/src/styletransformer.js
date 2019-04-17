@@ -19,9 +19,10 @@ import { oneOfType, number, string, func, object } from 'prop-types';
 const createElement = type => {
   const isEl = typeof type === 'string';
 
-  const Base = props => {
-    const Comp = isEl ? props.is || type : type;
-    return <Comp {...props} />;
+  const Base = ({ ...next }) => {
+    const Comp = isEl ? next.is || type : type;
+    if (isEl) delete next.is;
+    return <Comp {...next} />;
   };
 
   Base.displayName = `Created(${
@@ -33,8 +34,7 @@ const createElement = type => {
   };
 
   return styled(Base, {
-    shouldForwardProp: prop =>
-      isEl ? !blacklist.concat('is').includes(prop) : true,
+    shouldForwardProp: prop => (isEl ? !blacklist.includes(prop) : true),
   })();
 };
 
