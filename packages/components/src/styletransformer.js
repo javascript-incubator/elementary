@@ -30,7 +30,8 @@ const createElement = type => {
   })`;
 
   Base.propTypes = {
-    is: string,
+    // eslint-disable-next-line react/require-default-props
+    is: oneOfType([string, func, object]),
   };
 
   return styled(Base, {
