@@ -5,6 +5,7 @@
     "prettier": "^1.14.3"
   },
   "scripts": {
+    "boot": "lerna bootstrap",
     "test": "lerna run test",
     "build": "lerna run build"
   },
