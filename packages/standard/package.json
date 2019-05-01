@@ -7,6 +7,7 @@
     "build"
   ],
   "scripts": {
+    "test": "ava",
     "prepublishOnly": "en-libstarter build",
     "build": "en-libstarter build"
   },
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "@enginite/libstarter": "^1.0.2",
+    "ava": "^1.4.1",
     "react": "^16.2.0"
   }
 }

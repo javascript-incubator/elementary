@@ -5,7 +5,7 @@
     "prettier": "^1.14.3"
   },
   "scripts": {
-    "upgrade-react": "lerna add react --scope=\"@elementary/components\" --dev && lerna add react --scope=\"@elementary/transformers\" --dev && lerna add react --scope=\"@elementary/orion\" && lerna add react-dom --scope=\"@elementary/orion\"&& lerna add react-dom --scope=\"@elementary/components\" --dev"
+    "test": "lerna run test"
   },
   "name": "elementary"
 }

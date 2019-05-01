@@ -9,6 +9,7 @@
   ],
   "types": "index.d.ts",
   "scripts": {
+    "test": "ava",
     "prepublishOnly": "en-libstarter build",
     "build": "en-libstarter build"
   },
@@ -27,6 +28,7 @@
     "@elementary/core": "^0.1.4"
   },
   "devDependencies": {
-    "@enginite/libstarter": "^1.0.2"
+    "@enginite/libstarter": "^1.0.2",
+    "ava": "^1.4.1"
   }
 }

@@ -1,11 +1,15 @@
-const { themeTransformer } = require('../build/main');
-const Standard = require('../build/main');
+import test from 'ava';
 
-const { breakpoints } = themeTransformer({ breakpoints: ['md'] });
+test('Dummy Test', t => t.pass());
 
-console.log(
-  Standard.flexContainer({
-    justifyContent: breakpoints(['md', 'sm']),
-    alignItems: breakpoints(['md', 'sm']),
-  }),
-);
+// const { themeTransformer } = require('../build/main');
+// const Standard = require('../build/main');
+
+// const { breakpoints } = themeTransformer({ breakpoints: ['md'] });
+
+// console.log(
+//   Standard.flexContainer({
+//     justifyContent: breakpoints(['md', 'sm']),
+//     alignItems: breakpoints(['md', 'sm']),
+//   }),
+// );
