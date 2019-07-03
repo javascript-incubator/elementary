@@ -1,0 +1,16 @@
+{
+  "name": "@elementary/core",
+  "version": "0.1.4-alpha.1",
+  "description": "Core Functions for Elementary Package",
+  "main": "build/main.js",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "en-libstarter build"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@enginite/libstarter": "^1.0.2"
+  }
+}
