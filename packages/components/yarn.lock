@@ -889,6 +889,14 @@
   dependencies:
     arrify "^1.0.1"
 
+"@elementary/standard@^0.6.1":
+  version "0.6.1"
+  resolved "https://registry.npmjs.org/@elementary/standard/-/standard-0.6.1.tgz#cd84fdc7f1426760324874072d5405476d0f0914"
+  integrity sha512-kKgG/WxKuAZMP3bk7GeDTg8h1wBlzGkzI3AMW021fuSx/yxesrRZtwWLMN6ebVeGrgECi7BtpHAX4aC0hYe9jw==
+  dependencies:
+    deepmerge "^3.2.0"
+    prop-types "^15.6.0"
+
 "@emotion/cache@^10.0.9":
   version "10.0.9"
   resolved "https://registry.npmjs.org/@emotion/cache/-/cache-10.0.9.tgz#e0c7b7a289f7530edcfad4dcf3858bd2e5700a6f"
@@ -2403,6 +2411,11 @@ deep-extend@^0.6.0:
   version "0.6.0"
   resolved "https://registry.npmjs.org/deep-extend/-/deep-extend-0.6.0.tgz#c4fa7c95404a17a9c3e8ca7e1537312b736330ac"
   integrity sha512-LOHxIOaPYdHlJRtCQfDIVZtfw/ufM8+rVj649RIHzcm/vGwQRXFt6OPqIFWsm2XEMrNIEtWR64sY1LEKD2vAOA==
+
+deepmerge@^3.2.0:
+  version "3.3.0"
+  resolved "https://registry.npmjs.org/deepmerge/-/deepmerge-3.3.0.tgz#d3c47fd6f3a93d517b14426b0628a17b0125f5f7"
+  integrity sha512-GRQOafGHwMHpjPx9iCvTgpu9NojZ49q794EEL94JVEw6VaeA8XTUyBKvAkOOjBX9oJNiV6G3P+T+tihFjo2TqA==
 
 default-gateway@^2.6.0:
   version "2.7.2"
