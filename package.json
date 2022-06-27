@@ -1,13 +1,5 @@
 {
-  "devDependencies": {
-    "@hellpack/eslint": "^0.1.0",
-    "lerna": "^3.4.3",
-    "prettier": "^1.14.3"
-  },
-  "scripts": {
-    "boot": "lerna bootstrap",
-    "test": "lerna run test",
-    "build": "lerna run build"
-  },
-  "name": "elementary"
+	"devDependencies": {
+		"eslint-config-rsh": "github:rajatsharma/eslint-config-rsh"
+	}
 }

@@ -2,15 +2,15 @@
   "name": "@elementary/core",
   "version": "0.1.4-alpha.1",
   "description": "Core Functions for Elementary Package",
-  "main": "build/main.js",
+  "main": "dist/index.js",
   "files": [
-    "build"
+    "dist"
   ],
   "scripts": {
-    "build": "en-libstarter build"
+    "build": "tsc"
   },
   "license": "MIT",
   "devDependencies": {
-    "@enginite/libstarter": "^1.0.2"
+    "typescript": "^4.7.4"
   }
 }
