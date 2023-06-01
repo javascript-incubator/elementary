@@ -11,7 +11,7 @@ export const concat = <T = SemiGroup>(
   obj: T,
   partial: DerivePartial<T>
 ): DerivePartial<T> => {
-  if (Array.isArray(obj) && Array.isArray(partial)) {
+  if (obj instanceof Array && partial instanceof Array) {
     return obj.concat(partial) as DerivePartial<T>;
   }
 
